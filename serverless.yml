@@ -1,0 +1,66 @@
+service: whatchangedfor
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: eu-central-1
+  environment:
+    DYNAMODB_TABLE: whatchangedfor-staging #${self:service}-${sls:stage}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+
+functions:
+  whatchangedfor-app:
+    handler: src/app/main.serverlessApp
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
+  whatchangedfor-api:
+    handler: src/api/api.hero
+    events:
+      - httpApi:
+          path: /api/{hero}
+          method: get
+
+
+resources:
+  Resources:
+    WhatChangedForDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      Properties:
+        AttributeDefinitions:
+          -
+            AttributeName: id
+            AttributeType: S
+          - 
+            AttributeName: version
+            AttributeType: S
+        KeySchema:
+          -
+            AttributeName: id
+            KeyType: HASH
+          - 
+            AttributeName: version
+            KeyType: RANGE
+        BillingMode: PAY_PER_REQUEST
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}
+
+custom:
+  serverless-offline:
+    noPrependStageInUrl: true

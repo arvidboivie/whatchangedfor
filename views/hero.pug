@@ -1,0 +1,25 @@
+html
+  head
+    title Hero Changes
+  body
+    h1 Changes:
+    each changes, version in changeSet.changes
+      //- pre #{JSON.stringify(changeSet)}
+      h2=version
+      h3 General Changes 
+      ul
+      if changes.generalChanges
+        each generalChange in changes.generalChanges 
+          li= generalChange
+      h3 Ability Changes 
+      if changes.abilityChanges
+        each ability in changes.abilityChanges 
+          h4= ability.name
+          ul
+          each abilityChange in ability.changes 
+            li= abilityChange
+      h3 Talent changes 
+      ul
+      if changes.talentChanges
+        each talentChange in changes.talentChanges 
+          li= talentChange 
