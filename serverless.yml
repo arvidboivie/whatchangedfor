@@ -11,7 +11,7 @@ provider:
   runtime: nodejs16.x
   region: eu-central-1
   environment:
-    DYNAMODB_TABLE: whatchangedfor-staging #${self:service}-${sls:stage}
+    DYNAMODB_TABLE: ${self:service}-${sls:stage}
   iam:
     role:
       statements:
@@ -25,19 +25,26 @@ provider:
             - dynamodb:DeleteItem
           Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
+package:
+  include:
+    - 'views/**/*.hbs'
+
 functions:
   whatchangedfor-app:
     handler: src/app/main.serverlessApp
+    url: true
     events:
       - http: ANY /
       - http: ANY /{proxy+}
-  whatchangedfor-api:
-    handler: src/api/api.hero
+  whatchangedfor-parser:
+    handler: src/parser/parser.parse
+    timeout: 120
     events:
-      - httpApi:
-          path: /api/{hero}
-          method: get
+      - schedule: rate(1 hour)
 
+custom:
+  serverless-offline:
+    noPrependStageInUrl: true
 
 resources:
   Resources:
@@ -60,7 +67,3 @@ resources:
             KeyType: RANGE
         BillingMode: PAY_PER_REQUEST
         TableName: ${self:provider.environment.DYNAMODB_TABLE}
-
-custom:
-  serverless-offline:
-    noPrependStageInUrl: true

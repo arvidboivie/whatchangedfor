@@ -1,133 +1,165 @@
-// import { HTMLElement, parse } from 'node-html-parser';
-// import util from 'util';
-// import * as puppeteer from 'puppeteer';
-// import { DynamoClient } from '../dynamodb/dynamodb.client';
-// import { AbilityChanges, ParsedChanges } from '../interfaces';
-// const { getChrome } = require('../chrome-script');
+import fetch from 'node-fetch';
+import { DynamoClient } from '../dynamodb/dynamodb.client';
+import {
+  Ability,
+  RawAbilityChange,
+  Hero,
+  Patch,
+  PatchNotes,
+  HeroChanges,
+  AbilityChange,
+  PatchNote,
+} from '../interfaces';
 
-// enum NoteType {
-//   GENERAL,
-//   ABILITY,
-//   TALENT,
-// }
+const BASE_URL = `https://www.dota2.com/datafeed`;
+const PATCH_LIST_URL = `${BASE_URL}/patchnoteslist?language=english`;
+const HERO_LIST_URL = `${BASE_URL}/herolist?language=english`;
+const ABILITY_LIST_URL = `${BASE_URL}/abilitylist?language=english`;
+const SPECIFIC_PATCH_URL = (version: string) =>
+  `${BASE_URL}/patchnotes?version=${version}&language=english`;
 
-// export const parseChanges = async (version: string) => {
-//   const chrome = getChrome();
+const LAST_VERSION_PATCHED = `latestVersionParsed`;
 
-//   const browser = await puppeteer.connect({
-//     browserWSEndpoint: chrome.endpoint,
-//   });
-//   const page = await browser.newPage();
+class PatchNoteParser {
+  private readonly dynamoClient: DynamoClient;
 
-//   await page.goto(`https://www.dota2.com/patches/${version}`);
+  private heroList: Hero[] = [];
+  private patchList: Patch[] = [];
+  private abilityList: Ability[] = [];
 
-//   await page.waitForNetworkIdle();
+  constructor() {
+    this.dynamoClient = new DynamoClient();
+  }
 
-//   const notesText = await page.evaluate(() => {
-//     return document.querySelector('[class^="patchnotespage_Body_11CXi"')
-//       ?.outerHTML;
-//   });
+  public async parse() {
+    await this.prepareData();
 
-//   if (!notesText) {
-//     throw Error('Unable to parse notes');
-//   }
+    // console.log(this.patchList);
+    // console.log(this.heroList);
+    // console.log(this.abilityList);
 
-//   await browser.close();
+    const latestVersionParsed = (await this.dynamoClient.get(
+      LAST_VERSION_PATCHED
+    )) as unknown as {
+      patch: string;
+      created_at: string;
+      id: 'latestVersionParsed';
+    }[];
 
-//   const parsedPage = parse(notesText);
+    if (latestVersionParsed[0]) {
+      const patchIndex = this.patchList.findIndex(
+        (patch) => patch.patch_number === latestVersionParsed[0].patch
+      );
 
-//   const heroNotes = await parsedPage.querySelectorAll(
-//     '[class^="patchnotespage_PatchNoteHero"]'
-//   );
+      this.patchList = this.patchList.slice(patchIndex + 1);
+    }
 
-//   const heroChanges: ParsedChanges[] = heroNotes.map((heroElement) => {
-//     let name = heroElement.querySelector(`[class^="patchnotespage_HeroName"]`)
-//       ?.text!;
+    for (const patch of this.patchList) {
+      await this.parsePatch(patch);
+    }
 
-//     let notes = heroElement.querySelectorAll(
-//       `[class^="patchnotespage_NoteElement"]`
-//     );
+    console.log(`Done! Parsed ${this.patchList.length} patches`);
+  }
 
-//     let generalChanges: string[] = [];
-//     let abilityChanges: AbilityChanges = {};
-//     let talentChanges: string[] = [];
+  private async parsePatch(patch: Patch) {
+    const patchNotes = (await (
+      await fetch(SPECIFIC_PATCH_URL(patch.patch_number))
+    ).json()) as PatchNotes;
 
-//     notes.forEach((noteElement) => {
-//       let noteType = findNoteType(noteElement);
+    // console.log(patchNotes);
 
-//       switch (noteType) {
-//         case NoteType.GENERAL:
-//           generalChanges.push(noteElement.text);
-//           break;
-//         case NoteType.ABILITY:
-//           let abilityName = findAbilityName(noteElement);
+    if (patchNotes.heroes) {
+      const heroChanges: HeroChanges[] = patchNotes.heroes.map((hero) => {
+        return {
+          name: this.lookupHeroName(hero.hero_id),
+          generalChanges: hero.hero_notes
+            ? this.parseSimpleChanges(hero.hero_notes)
+            : undefined,
+          abilityChanges: hero.abilities
+            ? this.parseAbilityChanges(hero.abilities)
+            : undefined,
+          talentChanges: hero.talent_notes
+            ? this.parseSimpleChanges(hero.talent_notes)
+            : undefined,
+        };
+      });
 
-//           if (abilityChanges[abilityName]) {
-//             abilityChanges[abilityName].push(noteElement.text);
-//             break;
-//           }
+      const savePromises = heroChanges.map((hero) =>
+        this.saveChangesToDynamo(hero, patch)
+      );
 
-//           abilityChanges[abilityName] = [noteElement.text];
-//           break;
-//         case NoteType.TALENT:
-//           talentChanges.push(noteElement.text);
-//           break;
-//       }
-//     });
+      await Promise.all(savePromises);
+    }
 
-//     return {
-//       name,
-//       generalChanges,
-//       abilityChanges,
-//       talentChanges,
-//     };
-//   });
+    await this.tagPatchAsParsed(patch);
+  }
 
-//   // console.log(util.inspect(heroChanges, false, null, true));
+  private saveChangesToDynamo(hero: HeroChanges, patch: Patch) {
+    const { name, ...changes } = hero;
+    return this.dynamoClient.put(this.toSnakeCase(name), patch.patch_number, {
+      patchDate: patch.patch_timestamp,
+      ...changes,
+    });
+  }
 
-//   const dynamoClient = new DynamoClient();
+  private tagPatchAsParsed(patch: Patch) {
+    return this.dynamoClient.put(LAST_VERSION_PATCHED, LAST_VERSION_PATCHED, {
+      patch: patch.patch_number,
+    });
+  }
 
-//   let dynamoOperations = heroChanges.map((hero) => {
-//     let { name, ...heroChanges } = hero;
-//     return dynamoClient.put(toSnakeCase(name), version, heroChanges);
-//   });
+  private parseAbilityChanges(abilities: RawAbilityChange[]): AbilityChange[] {
+    return abilities.map((changes) => {
+      return {
+        name: this.lookupAbilityName(changes.ability_id),
+        changes: changes.ability_notes.map((note) => note.note),
+      };
+    });
+  }
 
-//   await Promise.all(dynamoOperations);
-// };
+  private parseSimpleChanges(notes: PatchNote[]): string[] {
+    return notes.map((note) => note.note);
+  }
 
-// const version = process.argv[2]; // First user CLI argument comes at pos 2
+  private lookupHeroName(heroId: number): string {
+    const name = this.heroList.find(
+      (hero) => hero.id === heroId
+    )?.name_english_loc;
 
-// if (!version) {
-//   throw Error(`You need to provide a version to run!`);
-// }
+    if (!name) {
+      throw Error(`Change detected for nonexisting hero`);
+    }
 
-// parseChanges(version);
+    return name;
+  }
 
-// const toSnakeCase = (toSnake: string): string =>
-//   toSnake.toLowerCase().replaceAll(` `, `_`);
+  private lookupAbilityName(abilityId: number): string {
+    const name = this.abilityList.find(
+      (ability) => ability.id === abilityId
+    )?.name_english_loc;
 
-// function findNoteType(element: HTMLElement): NoteType {
-//   if (element.parentNode.classNames.match(`^patchnotespage_AbilityNote`)) {
-//     return NoteType.ABILITY;
-//   }
+    if (!name) {
+      throw Error(`Change detected for nonexisting ability`);
+    }
 
-//   if (element.parentNode.classNames.match(`^patchnotespage_PatchNoteHero`)) {
-//     return NoteType.GENERAL;
-//   }
+    return name;
+  }
 
-//   if (element.parentNode.classNames.match(`^patchnotespage_TalentNotes`)) {
-//     return NoteType.TALENT;
-//   }
+  private toSnakeCase(toSnake: string): string {
+    return toSnake.toLowerCase().replaceAll(` `, `_`);
+  }
 
-//   return findNoteType(element.parentNode);
-// }
+  private async prepareData() {
+    this.heroList = (
+      await (await fetch(HERO_LIST_URL)).json()
+    ).result.data.heroes;
+    this.patchList = (await (await fetch(PATCH_LIST_URL)).json()).patches;
+    this.abilityList = (
+      await (await fetch(ABILITY_LIST_URL)).json()
+    ).result.data.itemabilities;
+  }
+}
 
-// function findAbilityName(noteElement: HTMLElement): string {
-//   let previousSibling = noteElement.previousElementSibling;
-
-//   if (previousSibling.classNames.match(`^patchnotespage_AbilityName`)) {
-//     return previousSibling.text;
-//   }
-
-//   return findAbilityName(previousSibling);
-// }
+export const parse = () => {
+  new PatchNoteParser().parse();
+};

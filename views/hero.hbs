@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    @font-face {
+      font-family: 'Radiance'; /*a name to be used later*/
+      src: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff'); /*URL to font*/
+      }
+
+    @font-face {
+        font-family: 'Reaver'; /*a name to be used later*/
+        src: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff'); /*URL to font*/
+    }
+
+    html {
+      background-color: #151618;
+    }
+
+    .pageTitle {
+      color: #ed3b1c;
+      font-family: "Reaver","Noto Sans",sans-serif;
+      text-transform: capitalize;
+    }
+
+    .patch {
+      color:#fff;
+      font-family: "Radiance","Noto Sans",sans-serif;
+    }
+
+    .abilityName {
+      font-family: "Reaver","Noto Sans",sans-serif;
+    }
+
+    .version {
+      color: #ed3b1c;
+      font-size: larger;
+    }
+
+    .date {  
+      color: #bbbbbbee;
+      float: right;
+      font-size: larger;
+    }
+
+    .changeNote {
+      color: #bbbbbbee;
+    }
+
+
+  </style>
+
+  <title>What changed for {{changeSet.name}}?</title>
+</head>
+<body>
+  {{#with changeSet}}
+  <div class="container">
+  <h1 class="pageTitle">{{name}}</h1>
+    {{#each changes}}
+      <div class="patch">
+        <p><span class="version">{{this.version}}</span><span class="date">{{this.patchDate}}</span></p>
+        {{#if generalChanges}}
+        <div class="general">
+          <h5>General Changes</h5>
+          <ul>
+            {{#each generalChanges}}
+              <li class="changeNote">{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        {{/if}}
+        {{#if abilityChanges}}
+        <div class="abilites">
+          <h5>Ability Changes</h5>
+          {{#each abilityChanges}}
+            <h6 class="abilityName">{{this.name}}</h6>
+            <ul>
+              {{#each changes}}
+                <li class="changeNote">{{this}}</li>
+              {{/each}}
+            </ul>
+          {{/each}}
+        </div>
+        {{/if}}
+        {{#if talentChanges}}
+        <div class="talents">
+          <h5>Talent Changes</h5>
+          <ul>
+            {{#each talentChanges}}
+              <li class="changeNote">{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        {{/if}}
+      </div>
+    {{/each}}
+  {{/with}}
+  </div>
+</body>
+</html>

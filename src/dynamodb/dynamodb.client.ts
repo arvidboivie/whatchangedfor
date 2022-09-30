@@ -5,7 +5,7 @@ import {
   QueryCommand,
 } from '@aws-sdk/lib-dynamodb';
 
-const TableName = `whatchangedfor-staging`;
+const TableName = process.env.DYNAMODB_TABLE;
 
 export class DynamoClient {
   private readonly client: DynamoDBDocumentClient;
