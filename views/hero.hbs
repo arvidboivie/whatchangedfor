@@ -33,6 +33,10 @@
       font-family: "Radiance","Noto Sans",sans-serif;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .abilityName {
       font-family: "Reaver","Noto Sans",sans-serif;
     }
@@ -63,7 +67,7 @@
   <h1 class="pageTitle">{{name}}</h1>
     {{#each changes}}
       <div class="patch">
-        <p><span class="version">{{this.version}}</span><span class="date">{{this.patchDate}}</span></p>
+        <p><a href="https://www.dota2.com/patches/{{this.version}}"><span class="version">{{this.version}}</span></a><span class="date">{{this.patchDate}}</span></p>
         {{#if generalChanges}}
         <div class="general">
           <h5>General Changes</h5>
