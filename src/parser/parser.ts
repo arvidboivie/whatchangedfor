@@ -34,10 +34,6 @@ class PatchNoteParser {
   public async parse() {
     await this.prepareData();
 
-    // console.log(this.patchList);
-    // console.log(this.heroList);
-    // console.log(this.abilityList);
-
     const latestVersionParsed = (await this.dynamoClient.get(
       LAST_VERSION_PATCHED
     )) as unknown as {
@@ -58,7 +54,10 @@ class PatchNoteParser {
       await this.parsePatch(patch);
     }
 
-    console.log(`Done! Parsed ${this.patchList.length} patches`);
+    console.log(
+      `Done! Parsed ${this.patchList.length} patches`,
+      this.patchList
+    );
   }
 
   private async parsePatch(patch: Patch) {
