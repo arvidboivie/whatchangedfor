@@ -1,4 +1,5 @@
 import express from 'express';
+import { readFileSync } from 'fs';
 import ServerlessHttp from 'serverless-http';
 import { DynamoClient } from '../dynamodb/dynamodb.client';
 import { AbilityChange, HeroChanges } from '../interfaces';
@@ -19,7 +20,9 @@ type HeroChangeList = {
   changes: Omit<HeroChanges, `name`> & { version: string; patchDate: string }[];
 };
 
-const heroNames: HeroName[] = require(`${__dirname}/../../resources/hero-data.json`);
+const heroNames: HeroName[] = JSON.parse(
+  readFileSync(`${__dirname}/../../resources/hero-data.json`).toString()
+);
 
 const app = express();
 
