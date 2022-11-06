@@ -2,6 +2,8 @@ import express from 'express';
 import ServerlessHttp from 'serverless-http';
 import { DynamoClient } from '../dynamodb/dynamodb.client';
 import { AbilityChange, HeroChanges } from '../interfaces';
+import { HeroName } from './hero.interfaces';
+import { HeroService } from './hero.service';
 
 interface DynamoHero {
   version: string;
@@ -17,6 +19,8 @@ type HeroChangeList = {
   changes: Omit<HeroChanges, `name`> & { version: string; patchDate: string }[];
 };
 
+const heroNames: HeroName[] = require(`${__dirname}/../../resources/hero-data.json`);
+
 const app = express();
 
 app.set(`view engine`, `hbs`);
@@ -26,23 +30,32 @@ app.get('/', (_req, res) => {
 });
 
 app.get('*', async (req, res) => {
-  const heroName = req.path.replaceAll(`/`, ``);
+  const searchString = req.path.replaceAll(`/`, ``);
 
-  const changeSet = await hero(heroName);
+  const heroName = new HeroService(heroNames).getNameFor(searchString);
 
-  res.render(`hero`, { changeSet });
+  if (heroName !== undefined) {
+    const changeSet = await hero(heroName);
+
+    res.render(`hero`, { changeSet });
+    return;
+  }
+
+  res.redirect('/');
 });
 
 export const serverlessApp = ServerlessHttp(app);
 
-export async function hero(heroName: string) {
+export async function hero(heroName: HeroName) {
   const dynamoClient = new DynamoClient();
 
   if (!heroName) {
     throw Error('No heroname provided');
   }
 
-  const rawHeroChanges = (await dynamoClient.get(heroName)) as DynamoHero[];
+  const rawHeroChanges = (await dynamoClient.get(
+    heroName.technicalName
+  )) as DynamoHero[];
 
   return rawHeroChanges.reverse().reduce<HeroChangeList>(
     (acc: HeroChangeList, changes: DynamoHero) => {
@@ -61,7 +74,7 @@ export async function hero(heroName: string) {
       return acc;
     },
     {
-      name: heroName,
+      name: heroName.humanName,
       changes: [],
     }
   );

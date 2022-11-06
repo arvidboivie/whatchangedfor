@@ -28,6 +28,7 @@ provider:
 package:
   include:
     - 'views/**/*.hbs'
+    - 'resources/*.json'
 
 functions:
   whatchangedfor-app:
