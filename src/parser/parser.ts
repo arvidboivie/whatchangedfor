@@ -65,8 +65,6 @@ class PatchNoteParser {
       await fetch(SPECIFIC_PATCH_URL(patch.patch_number))
     ).json()) as PatchNotes;
 
-    // console.log(patchNotes);
-
     if (patchNotes.heroes) {
       const heroChanges: HeroChanges[] = patchNotes.heroes.map((hero) => {
         return {
