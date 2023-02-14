@@ -1,5 +1,8 @@
-import fetch from 'node-fetch';
-import { DynamoClient } from '../dynamodb/dynamodb.client';
+// Enable Yarn PnP
+require("../../.pnp.cjs").setup();
+
+import fetch from "node-fetch";
+import { DynamoClient } from "../dynamodb/dynamodb.client";
 import {
   Ability,
   RawAbilityChange,
@@ -9,7 +12,7 @@ import {
   HeroChanges,
   AbilityChange,
   PatchNote,
-} from '../interfaces';
+} from "../interfaces";
 
 const BASE_URL = `https://www.dota2.com/datafeed`;
 const PATCH_LIST_URL = `${BASE_URL}/patchnoteslist?language=english`;
@@ -39,7 +42,7 @@ class PatchNoteParser {
     )) as unknown as {
       patch: string;
       created_at: string;
-      id: 'latestVersionParsed';
+      id: "latestVersionParsed";
     }[];
 
     if (latestVersionParsed[0]) {

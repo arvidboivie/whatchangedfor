@@ -29,6 +29,9 @@ package:
   include:
     - 'views/**/*.hbs'
     - 'resources/*.json'
+    - '.yarn'
+    - '.pnp.cjs'
+    - '.pnp.loader.mjs'
 
 functions:
   whatchangedfor-app:

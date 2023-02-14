@@ -1,7 +1,7 @@
-import { parse, ParseResult } from 'papaparse';
-import { createReadStream } from 'fs';
-import { HeroName, isHeroName } from '../src/app/hero.interfaces';
-import { writeFile } from 'fs/promises';
+import { parse, ParseResult } from "papaparse";
+import { createReadStream } from "fs";
+import { HeroName, isHeroName } from "../src/app/hero.interfaces";
+import { writeFile } from "fs/promises";
 
 const RESOURCE_PATH = `${__dirname}/../resources`;
 
@@ -10,14 +10,14 @@ export const getHeroNames = async (): Promise<void> => {
 
   const heroList: Promise<ParseResult<HeroName>> = new Promise((resolve) => {
     parse(input, {
-      delimiter: ';',
+      delimiter: ";",
       header: true,
       transform: (value: string, header: string) => {
         value = value.trim();
         switch (header) {
-          case 'nicknames':
+          case "nicknames":
             return value.length > 0
-              ? value.split(',').map((n) => n.trim().toLowerCase())
+              ? value.split(",").map((n) => n.trim().toLowerCase())
               : [];
           default:
             return value;

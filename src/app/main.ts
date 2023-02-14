@@ -1,10 +1,13 @@
-import express from 'express';
-import { readFileSync } from 'fs';
-import ServerlessHttp from 'serverless-http';
-import { DynamoClient } from '../dynamodb/dynamodb.client';
-import { AbilityChange, HeroChanges } from '../interfaces';
-import { HeroName } from './hero.interfaces';
-import { HeroService } from './hero.service';
+// Enable Yarn PnP
+require("../../.pnp.cjs").setup();
+
+import express from "express";
+import { readFileSync } from "fs";
+import ServerlessHttp from "serverless-http";
+import { DynamoClient } from "../dynamodb/dynamodb.client";
+import { AbilityChange, HeroChanges } from "../interfaces";
+import { HeroName } from "./hero.interfaces";
+import { HeroService } from "./hero.service";
 
 interface DynamoHero {
   version: string;
@@ -28,11 +31,11 @@ const app = express();
 
 app.set(`view engine`, `hbs`);
 
-app.get('/', (_req, res) => {
-  res.send('Hello World!');
+app.get("/", (_req, res) => {
+  res.send("Hello World!");
 });
 
-app.get('*', async (req, res) => {
+app.get("*", async (req, res) => {
   const searchString = req.path.replaceAll(`/`, ``);
 
   const heroName = new HeroService(heroNames).getNameFor(searchString);
@@ -44,7 +47,7 @@ app.get('*', async (req, res) => {
     return;
   }
 
-  res.redirect('/');
+  res.redirect("/");
 });
 
 export const serverlessApp = ServerlessHttp(app);
@@ -53,7 +56,7 @@ export async function hero(heroName: HeroName) {
   const dynamoClient = new DynamoClient();
 
   if (!heroName) {
-    throw Error('No heroname provided');
+    throw Error("No heroname provided");
   }
 
   const rawHeroChanges = (await dynamoClient.get(

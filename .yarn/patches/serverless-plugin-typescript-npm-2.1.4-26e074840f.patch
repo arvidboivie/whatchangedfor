@@ -1,0 +1,40 @@
+diff --git a/dist/src/index.js b/dist/src/index.js
+index 0fd199cf4eeb45b96053b6ef9bbf4a2ad80302b3..13e9db81e7df851072b9ff8529116f2d76da6ae0 100644
+--- a/dist/src/index.js
++++ b/dist/src/index.js
+@@ -18,6 +18,16 @@ const typescript = require("./typescript");
+ const watchFiles_1 = require("./watchFiles");
+ const SERVERLESS_FOLDER = '.serverless';
+ const BUILD_FOLDER = '.build';
++
++// handles broken symlinks
++const symlinkExistsSync = (path) => {
++    try {
++        fs.lstatSync(path);
++        return true;
++    } catch (e) {
++        return false;
++    }
++}
+ class TypeScriptPlugin {
+     constructor(serverless, options) {
+         this.serverless = serverless;
+@@ -201,10 +211,16 @@ class TypeScriptPlugin {
+             const outModulesPath = path.resolve(path.join(BUILD_FOLDER, 'node_modules'));
+             // copy development dependencies during packaging
+             if (isPackaging) {
+-                if (fs.existsSync(outModulesPath)) {
++                // symlinkExistsSync handles the broken symlink case
++                if (fs.existsSync(outModulesPath) || symlinkExistsSync(outModulesPath)) {
+                     fs.removeSync(outModulesPath);
+                 }
+-                fs.copySync(path.resolve('node_modules'), path.resolve(path.join(BUILD_FOLDER, 'node_modules')));
++                if (fs.existsSync(path.resolve('node_modules'))) {
++                    fs.copySync(
++                        path.resolve('node_modules'),
++                        outModulesPath
++                    )
++                }
+             }
+             else {
+                 if (!fs.existsSync(outModulesPath)) {
