@@ -1,4 +1,4 @@
-import { HeroName } from './hero.interfaces';
+import { HeroName } from "./hero.interfaces";
 
 export class HeroService {
   private readonly heroNames: HeroName[];
@@ -37,8 +37,8 @@ export class HeroService {
 
   private compareNames(nameA: string, nameB: string): boolean {
     return (
-      nameA.toLowerCase().replaceAll(/[^a-zA-Z]/g, '') ===
-      nameB.toLowerCase().replaceAll(/[^a-zA-Z]/g, '')
+      nameA.toLowerCase().replaceAll(/[^a-zA-Z]/g, "") ===
+      nameB.toLowerCase().replaceAll(/[^a-zA-Z]/g, "")
     );
   }
 }

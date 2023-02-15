@@ -1,29 +1,29 @@
-import { HeroName } from '../src/app/hero.interfaces';
+import { HeroName } from "../src/app/hero.interfaces";
 
 export const MockHeroes = {
   AntiMage: {
-    technicalName: 'anti-mage',
-    humanName: 'Anti-Mage',
-    nicknames: ['AM', 'andy', 'Magina'],
+    technicalName: "anti-mage",
+    humanName: "Anti-Mage",
+    nicknames: ["AM", "andy", "Magina"],
   },
   CentaurWarrunner: {
-    technicalName: 'centaur_warrunner',
-    humanName: 'Centaur Warrunner',
-    nicknames: ['Centaur', 'Kentaur', 'Kenta'],
+    technicalName: "centaur_warrunner",
+    humanName: "Centaur Warrunner",
+    nicknames: ["Centaur", "Kentaur", "Kenta"],
   },
   CrystalMaiden: {
-    technicalName: 'crystal_maiden',
-    humanName: 'Crystal Maiden',
-    nicknames: ['CM', 'Rylai'],
+    technicalName: "crystal_maiden",
+    humanName: "Crystal Maiden",
+    nicknames: ["CM", "Rylai"],
   },
   ChaosKnight: {
-    technicalName: 'chaos_knight',
-    humanName: 'Chaos Knight',
-    nicknames: ['CK'],
+    technicalName: "chaos_knight",
+    humanName: "Chaos Knight",
+    nicknames: ["CK"],
   },
   Pudge: {
-    technicalName: 'pudge',
-    humanName: 'Pudge',
+    technicalName: "pudge",
+    humanName: "Pudge",
     nicknames: [],
   },
 };

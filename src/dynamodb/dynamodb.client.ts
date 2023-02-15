@@ -1,9 +1,9 @@
-import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import {
   DynamoDBDocumentClient,
   PutCommand,
   QueryCommand,
-} from '@aws-sdk/lib-dynamodb';
+} from "@aws-sdk/lib-dynamodb";
 
 const TableName = process.env.DYNAMODB_TABLE;
 
@@ -37,7 +37,7 @@ export class DynamoClient {
       new QueryCommand({
         TableName,
         ExpressionAttributeValues: {
-          ':s': id,
+          ":s": id,
         },
         KeyConditionExpression: `id = :s`,
       })

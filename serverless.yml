@@ -1,6 +1,6 @@
 service: whatchangedfor
 
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 plugins:
   - serverless-plugin-typescript
@@ -28,11 +28,11 @@ provider:
 
 package:
   include:
-    - 'views/**/*.hbs'
-    - 'resources/*.json'
-    - '.yarn'
-    - '.pnp.cjs'
-    - '.pnp.loader.mjs'
+    - "views/**/*.hbs"
+    - "resources/*.json"
+    - ".yarn"
+    - ".pnp.cjs"
+    - ".pnp.loader.mjs"
 
 functions:
   whatchangedfor-app:
@@ -54,21 +54,17 @@ custom:
 resources:
   Resources:
     WhatChangedForDynamoDbTable:
-      Type: 'AWS::DynamoDB::Table'
+      Type: "AWS::DynamoDB::Table"
       Properties:
         AttributeDefinitions:
-          -
-            AttributeName: id
+          - AttributeName: id
             AttributeType: S
-          - 
-            AttributeName: version
+          - AttributeName: version
             AttributeType: S
         KeySchema:
-          -
-            AttributeName: id
+          - AttributeName: id
             KeyType: HASH
-          - 
-            AttributeName: version
+          - AttributeName: version
             KeyType: RANGE
         BillingMode: PAY_PER_REQUEST
         TableName: ${self:provider.environment.DYNAMODB_TABLE}

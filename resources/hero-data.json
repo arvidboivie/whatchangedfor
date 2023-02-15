@@ -1,1 +1,420 @@
-[{"technicalName":"abbadon","humanName":"Abbadon","nicknames":["abba"]},{"technicalName":"anti-mage","humanName":"Anti-Mage","nicknames":["am","andy","magina"]},{"technicalName":"alchemist","humanName":"Alchemist","nicknames":["alch"]},{"technicalName":"pudge","humanName":"Pudge","nicknames":[]},{"technicalName":"crystal_maiden","humanName":"Crystal Maiden","nicknames":["cm","rylai"]},{"technicalName":"axe","humanName":"Axe","nicknames":["mogul khan"]},{"technicalName":"beastmaster","humanName":"Beastmaster","nicknames":["beast","bm"]},{"technicalName":"brewmaster","humanName":"Brewmaster","nicknames":["brew","panda"]},{"technicalName":"bristleback","humanName":"Bristleback","nicknames":["bristle","bb","svinet"]},{"technicalName":"centaur_warrunner","humanName":"Centaur Warrunner","nicknames":["centaur","kentaur","kenta"]},{"technicalName":"chaos_knight","humanName":"Chaos Knight","nicknames":["ck"]},{"technicalName":"clockwerk","humanName":"Clockwerk","nicknames":["clock"]},{"technicalName":"dawnbreaker","humanName":"Dawnbreaker","nicknames":["dawn","hammarmamma"]},{"technicalName":"doom","humanName":"Doom","nicknames":[]},{"technicalName":"dragon_knight","humanName":"Dragon Knight","nicknames":["dk"]},{"technicalName":"earth_spirit","humanName":"Earth Spirit","nicknames":[]},{"technicalName":"earthshaker","humanName":"Earthshaker","nicknames":["es"]},{"technicalName":"elder_titan","humanName":"Elder Titan","nicknames":["et"]},{"technicalName":"huskar","humanName":"Huskar","nicknames":["huskarr"]},{"technicalName":"io","humanName":"Io","nicknames":["wisp"]},{"technicalName":"kunkka","humanName":"Kunkka","nicknames":["kapten"]},{"technicalName":"legion_commander","humanName":"Legion Commander","nicknames":["legion","lc"]},{"technicalName":"lifestealer","humanName":"Lifestealer","nicknames":["ls","naix"]},{"technicalName":"lycan","humanName":"Lycan","nicknames":["lycanthrope","banehallow"]},{"technicalName":"magnus","humanName":"Magnus","nicknames":["magnataur","mange"]},{"technicalName":"marci","humanName":"Marci","nicknames":[]},{"technicalName":"mars","humanName":"Mars","nicknames":["rederiet"]},{"technicalName":"night_stalker","humanName":"Night Stalker","nicknames":["ns","balanar"]},{"technicalName":"omniknight","humanName":"Omniknight","nicknames":["omni"]},{"technicalName":"phoenix","humanName":"Phoenix","nicknames":[]},{"technicalName":"sand_king","humanName":"Sand King","nicknames":["sk"]},{"technicalName":"slardar","humanName":"Slardar","nicknames":[]},{"technicalName":"snapfore","humanName":"Snapfire","nicknames":["snap"]},{"technicalName":"spirit_breaker","humanName":"Spirit Breaker","nicknames":["sb","barathrum","springkon"]},{"technicalName":"sven","humanName":"Sven","nicknames":[]},{"technicalName":"tidehunter","humanName":"Tidehunter","nicknames":["tide"]},{"technicalName":"timbersaw","humanName":"Timbersaw","nicknames":["timber"]},{"technicalName":"tiny","humanName":"Tiny","nicknames":[]},{"technicalName":"treant_protector","humanName":"Treant Protector","nicknames":["treant","rooftrellen"]},{"technicalName":"tusk","humanName":"Tusk","nicknames":["tuskarr"]},{"technicalName":"underlord","humanName":"Underlord","nicknames":[]},{"technicalName":"undying","humanName":"Undying","nicknames":[]},{"technicalName":"wraith_king","humanName":"Wraith King","nicknames":["wk","skeleton king","leoric"]},{"technicalName":"arc_warden","humanName":"Arc Warden","nicknames":[]},{"technicalName":"bloodseeker","humanName":"Bloodseeker","nicknames":["bs","strygwyr"]},{"technicalName":"bounty_hunter","humanName":"Bounty Hunter","nicknames":["bh","gondar"]},{"technicalName":"broodmother","humanName":"Broodmother","nicknames":["brood"]},{"technicalName":"clinkz","humanName":"Clinkz","nicknames":[]},{"technicalName":"drow_ranger","humanName":"Drow Ranger","nicknames":["drow","trax","traxex"]},{"technicalName":"ember_spirit","humanName":"Ember Spirit","nicknames":["ember"]},{"technicalName":"faceless_void","humanName":"Faceless Void","nicknames":["faceless","void"]},{"technicalName":"gyrocopter","humanName":"Gyrocopter","nicknames":["gyro"]},{"technicalName":"hoodwink","humanName":"Hoodwink","nicknames":["hood","skux","proper skux","ekorren"]},{"technicalName":"juggernaut","humanName":"Juggernaut","nicknames":["jugg","yurnero"]},{"technicalName":"lone_druid","humanName":"Lone Druid","nicknames":["ld","matu","matumbaman"]},{"technicalName":"luna","humanName":"Luna","nicknames":[]},{"technicalName":"medusa","humanName":"Medusa","nicknames":["dusa"]},{"technicalName":"meepo","humanName":"Meepo","nicknames":[]},{"technicalName":"mirana","humanName":"Mirana","nicknames":[]},{"technicalName":"monkey_king","humanName":"Monkey King","nicknames":["mk","monkey","sun wukong"]},{"technicalName":"morphling","humanName":"Morphling","nicknames":["morph"]},{"technicalName":"naga_siren","humanName":"Naga Siren","nicknames":["naga"]},{"technicalName":"nyx_assassin","humanName":"Nyx Assassin","nicknames":["nyx","anubarak"]},{"technicalName":"pangolier","humanName":"Pangolier","nicknames":["pango","avec aplomb"]},{"technicalName":"phantom_assassin","humanName":"Phantom Assassin","nicknames":["pa","mortred"]},{"technicalName":"phantom_lancer","humanName":"Phantom Lancer","nicknames":["pl"]},{"technicalName":"razor","humanName":"Razor","nicknames":[]},{"technicalName":"riki","humanName":"Riki","nicknames":["rikimaru"]},{"technicalName":"shadow_fiend","humanName":"Shadow Fiend","nicknames":["sf","nevermore"]},{"technicalName":"slark","humanName":"Slark","nicknames":[]},{"technicalName":"sniper","humanName":"Sniper","nicknames":[]},{"technicalName":"spectre","humanName":"Spectre","nicknames":[]},{"technicalName":"templar_assassin","humanName":"Templar Assassin","nicknames":["ta","lanaya"]},{"technicalName":"terrorblade","humanName":"Terrorblade","nicknames":["tb"]},{"technicalName":"troll_warlord","humanName":"Troll Warlord","nicknames":["troll"]},{"technicalName":"ursa","humanName":"Ursa","nicknames":[]},{"technicalName":"vengeful_spirit","humanName":"Vengeful Spirit","nicknames":["venge"]},{"technicalName":"venomancer","humanName":"Venomancer","nicknames":["veno"]},{"technicalName":"viper","humanName":"Viper","nicknames":[]},{"technicalName":"weaver","humanName":"Weaver","nicknames":["myran"]},{"technicalName":"ancient_apparition","humanName":"Ancient Apparition","nicknames":["aa"]},{"technicalName":"bane","humanName":"Bane","nicknames":[]},{"technicalName":"batrider","humanName":"Batrider","nicknames":["bat"]},{"technicalName":"chen","humanName":"Chen","nicknames":[]},{"technicalName":"dark_seer","humanName":"Dark Seer","nicknames":["ds"]},{"technicalName":"dark_willow","humanName":"Dark Willow","nicknames":["willow"]},{"technicalName":"dazzle","humanName":"Dazzle","nicknames":[]},{"technicalName":"death_prophet","humanName":"Death Prophet","nicknames":["dp","krobelus"]},{"technicalName":"disruptor","humanName":"Disruptor","nicknames":[]},{"technicalName":"enchantress","humanName":"Enchantress","nicknames":["ench"]},{"technicalName":"enigma","humanName":"Enigma","nicknames":[]},{"technicalName":"grimstroke","humanName":"Grimstroke","nicknames":["grim","grimpa"]},{"technicalName":"invoker","humanName":"Invoker","nicknames":["karl"]},{"technicalName":"jakiro","humanName":"Jakiro","nicknames":[]},{"technicalName":"keeper_of_the_light","humanName":"Keeper of the Light","nicknames":["kotl","v75"]},{"technicalName":"leshrac","humanName":"Leshrac","nicknames":["lesh"]},{"technicalName":"lich","humanName":"Lich","nicknames":["lichen","kelthuzad"]},{"technicalName":"lina","humanName":"Lina","nicknames":["slayer"]},{"technicalName":"lion","humanName":"Lion","nicknames":["demon witch"]},{"technicalName":"nature's_prophet","humanName":"Nature's Prophet","nicknames":["np","furion"]},{"technicalName":"necrophos","humanName":"Necrophos","nicknames":["necro","necrolyte","rotundjere"]},{"technicalName":"ogre_magi","humanName":"Ogre Magi","nicknames":["ogre"]},{"technicalName":"oracle","humanName":"Oracle","nicknames":[]},{"technicalName":"outworld_devourer","humanName":"Outworld Devourer","nicknames":["od","outworld destroyer","obsidian destroyer"]},{"technicalName":"puck","humanName":"Puck","nicknames":[]},{"technicalName":"pugna","humanName":"Pugna","nicknames":["pugna"]},{"technicalName":"queen_of_pain","humanName":"Queen of Pain","nicknames":["qop"]},{"technicalName":"rubick","humanName":"Rubick","nicknames":[]},{"technicalName":"shadow_demon","humanName":"Shadow Demon","nicknames":["sd"]},{"technicalName":"shadow_shaman","humanName":"Shadow Shaman","nicknames":["ss","rhasta"]},{"technicalName":"silencer","humanName":"Silencer","nicknames":[]},{"technicalName":"skywrath_mage","humanName":"Skywrath Mage","nicknames":["sky","skywrath"]},{"technicalName":"storm_spirit","humanName":"Storm Spirit","nicknames":["storm"]},{"technicalName":"techies","humanName":"Techies","nicknames":[]},{"technicalName":"tinker","humanName":"Tinker","nicknames":[]},{"technicalName":"visage","humanName":"Visage","nicknames":[]},{"technicalName":"void_spirit","humanName":"Void Spirit","nicknames":[]},{"technicalName":"warlock","humanName":"Warlock","nicknames":["lock"]},{"technicalName":"windranger","humanName":"Windranger","nicknames":["wr"]},{"technicalName":"winter_wyvern","humanName":"Winter Wyvern","nicknames":["ww"]},{"technicalName":"witch_doctor","humanName":"Witch Doctor","nicknames":["wd"]},{"technicalName":"zeus","humanName":"Zeus","nicknames":[]}]
+[
+  { "technicalName": "abbadon", "humanName": "Abbadon", "nicknames": ["abba"] },
+  {
+    "technicalName": "anti-mage",
+    "humanName": "Anti-Mage",
+    "nicknames": ["am", "andy", "magina"]
+  },
+  {
+    "technicalName": "alchemist",
+    "humanName": "Alchemist",
+    "nicknames": ["alch"]
+  },
+  { "technicalName": "pudge", "humanName": "Pudge", "nicknames": [] },
+  {
+    "technicalName": "crystal_maiden",
+    "humanName": "Crystal Maiden",
+    "nicknames": ["cm", "rylai"]
+  },
+  { "technicalName": "axe", "humanName": "Axe", "nicknames": ["mogul khan"] },
+  {
+    "technicalName": "beastmaster",
+    "humanName": "Beastmaster",
+    "nicknames": ["beast", "bm"]
+  },
+  {
+    "technicalName": "brewmaster",
+    "humanName": "Brewmaster",
+    "nicknames": ["brew", "panda"]
+  },
+  {
+    "technicalName": "bristleback",
+    "humanName": "Bristleback",
+    "nicknames": ["bristle", "bb", "svinet"]
+  },
+  {
+    "technicalName": "centaur_warrunner",
+    "humanName": "Centaur Warrunner",
+    "nicknames": ["centaur", "kentaur", "kenta"]
+  },
+  {
+    "technicalName": "chaos_knight",
+    "humanName": "Chaos Knight",
+    "nicknames": ["ck"]
+  },
+  {
+    "technicalName": "clockwerk",
+    "humanName": "Clockwerk",
+    "nicknames": ["clock"]
+  },
+  {
+    "technicalName": "dawnbreaker",
+    "humanName": "Dawnbreaker",
+    "nicknames": ["dawn", "hammarmamma"]
+  },
+  { "technicalName": "doom", "humanName": "Doom", "nicknames": [] },
+  {
+    "technicalName": "dragon_knight",
+    "humanName": "Dragon Knight",
+    "nicknames": ["dk"]
+  },
+  {
+    "technicalName": "earth_spirit",
+    "humanName": "Earth Spirit",
+    "nicknames": []
+  },
+  {
+    "technicalName": "earthshaker",
+    "humanName": "Earthshaker",
+    "nicknames": ["es"]
+  },
+  {
+    "technicalName": "elder_titan",
+    "humanName": "Elder Titan",
+    "nicknames": ["et"]
+  },
+  {
+    "technicalName": "huskar",
+    "humanName": "Huskar",
+    "nicknames": ["huskarr"]
+  },
+  { "technicalName": "io", "humanName": "Io", "nicknames": ["wisp"] },
+  { "technicalName": "kunkka", "humanName": "Kunkka", "nicknames": ["kapten"] },
+  {
+    "technicalName": "legion_commander",
+    "humanName": "Legion Commander",
+    "nicknames": ["legion", "lc"]
+  },
+  {
+    "technicalName": "lifestealer",
+    "humanName": "Lifestealer",
+    "nicknames": ["ls", "naix"]
+  },
+  {
+    "technicalName": "lycan",
+    "humanName": "Lycan",
+    "nicknames": ["lycanthrope", "banehallow"]
+  },
+  {
+    "technicalName": "magnus",
+    "humanName": "Magnus",
+    "nicknames": ["magnataur", "mange"]
+  },
+  { "technicalName": "marci", "humanName": "Marci", "nicknames": [] },
+  { "technicalName": "mars", "humanName": "Mars", "nicknames": ["rederiet"] },
+  {
+    "technicalName": "night_stalker",
+    "humanName": "Night Stalker",
+    "nicknames": ["ns", "balanar"]
+  },
+  {
+    "technicalName": "omniknight",
+    "humanName": "Omniknight",
+    "nicknames": ["omni"]
+  },
+  { "technicalName": "phoenix", "humanName": "Phoenix", "nicknames": [] },
+  {
+    "technicalName": "sand_king",
+    "humanName": "Sand King",
+    "nicknames": ["sk"]
+  },
+  { "technicalName": "slardar", "humanName": "Slardar", "nicknames": [] },
+  {
+    "technicalName": "snapfore",
+    "humanName": "Snapfire",
+    "nicknames": ["snap"]
+  },
+  {
+    "technicalName": "spirit_breaker",
+    "humanName": "Spirit Breaker",
+    "nicknames": ["sb", "barathrum", "springkon"]
+  },
+  { "technicalName": "sven", "humanName": "Sven", "nicknames": [] },
+  {
+    "technicalName": "tidehunter",
+    "humanName": "Tidehunter",
+    "nicknames": ["tide"]
+  },
+  {
+    "technicalName": "timbersaw",
+    "humanName": "Timbersaw",
+    "nicknames": ["timber"]
+  },
+  { "technicalName": "tiny", "humanName": "Tiny", "nicknames": [] },
+  {
+    "technicalName": "treant_protector",
+    "humanName": "Treant Protector",
+    "nicknames": ["treant", "rooftrellen"]
+  },
+  { "technicalName": "tusk", "humanName": "Tusk", "nicknames": ["tuskarr"] },
+  { "technicalName": "underlord", "humanName": "Underlord", "nicknames": [] },
+  { "technicalName": "undying", "humanName": "Undying", "nicknames": [] },
+  {
+    "technicalName": "wraith_king",
+    "humanName": "Wraith King",
+    "nicknames": ["wk", "skeleton king", "leoric"]
+  },
+  { "technicalName": "arc_warden", "humanName": "Arc Warden", "nicknames": [] },
+  {
+    "technicalName": "bloodseeker",
+    "humanName": "Bloodseeker",
+    "nicknames": ["bs", "strygwyr"]
+  },
+  {
+    "technicalName": "bounty_hunter",
+    "humanName": "Bounty Hunter",
+    "nicknames": ["bh", "gondar"]
+  },
+  {
+    "technicalName": "broodmother",
+    "humanName": "Broodmother",
+    "nicknames": ["brood"]
+  },
+  { "technicalName": "clinkz", "humanName": "Clinkz", "nicknames": [] },
+  {
+    "technicalName": "drow_ranger",
+    "humanName": "Drow Ranger",
+    "nicknames": ["drow", "trax", "traxex"]
+  },
+  {
+    "technicalName": "ember_spirit",
+    "humanName": "Ember Spirit",
+    "nicknames": ["ember"]
+  },
+  {
+    "technicalName": "faceless_void",
+    "humanName": "Faceless Void",
+    "nicknames": ["faceless", "void"]
+  },
+  {
+    "technicalName": "gyrocopter",
+    "humanName": "Gyrocopter",
+    "nicknames": ["gyro"]
+  },
+  {
+    "technicalName": "hoodwink",
+    "humanName": "Hoodwink",
+    "nicknames": ["hood", "skux", "proper skux", "ekorren"]
+  },
+  {
+    "technicalName": "juggernaut",
+    "humanName": "Juggernaut",
+    "nicknames": ["jugg", "yurnero"]
+  },
+  {
+    "technicalName": "lone_druid",
+    "humanName": "Lone Druid",
+    "nicknames": ["ld", "matu", "matumbaman"]
+  },
+  { "technicalName": "luna", "humanName": "Luna", "nicknames": [] },
+  { "technicalName": "medusa", "humanName": "Medusa", "nicknames": ["dusa"] },
+  { "technicalName": "meepo", "humanName": "Meepo", "nicknames": [] },
+  { "technicalName": "mirana", "humanName": "Mirana", "nicknames": [] },
+  {
+    "technicalName": "monkey_king",
+    "humanName": "Monkey King",
+    "nicknames": ["mk", "monkey", "sun wukong"]
+  },
+  {
+    "technicalName": "morphling",
+    "humanName": "Morphling",
+    "nicknames": ["morph"]
+  },
+  {
+    "technicalName": "naga_siren",
+    "humanName": "Naga Siren",
+    "nicknames": ["naga"]
+  },
+  {
+    "technicalName": "nyx_assassin",
+    "humanName": "Nyx Assassin",
+    "nicknames": ["nyx", "anubarak"]
+  },
+  {
+    "technicalName": "pangolier",
+    "humanName": "Pangolier",
+    "nicknames": ["pango", "avec aplomb"]
+  },
+  {
+    "technicalName": "phantom_assassin",
+    "humanName": "Phantom Assassin",
+    "nicknames": ["pa", "mortred"]
+  },
+  {
+    "technicalName": "phantom_lancer",
+    "humanName": "Phantom Lancer",
+    "nicknames": ["pl"]
+  },
+  { "technicalName": "razor", "humanName": "Razor", "nicknames": [] },
+  { "technicalName": "riki", "humanName": "Riki", "nicknames": ["rikimaru"] },
+  {
+    "technicalName": "shadow_fiend",
+    "humanName": "Shadow Fiend",
+    "nicknames": ["sf", "nevermore"]
+  },
+  { "technicalName": "slark", "humanName": "Slark", "nicknames": [] },
+  { "technicalName": "sniper", "humanName": "Sniper", "nicknames": [] },
+  { "technicalName": "spectre", "humanName": "Spectre", "nicknames": [] },
+  {
+    "technicalName": "templar_assassin",
+    "humanName": "Templar Assassin",
+    "nicknames": ["ta", "lanaya"]
+  },
+  {
+    "technicalName": "terrorblade",
+    "humanName": "Terrorblade",
+    "nicknames": ["tb"]
+  },
+  {
+    "technicalName": "troll_warlord",
+    "humanName": "Troll Warlord",
+    "nicknames": ["troll"]
+  },
+  { "technicalName": "ursa", "humanName": "Ursa", "nicknames": [] },
+  {
+    "technicalName": "vengeful_spirit",
+    "humanName": "Vengeful Spirit",
+    "nicknames": ["venge"]
+  },
+  {
+    "technicalName": "venomancer",
+    "humanName": "Venomancer",
+    "nicknames": ["veno"]
+  },
+  { "technicalName": "viper", "humanName": "Viper", "nicknames": [] },
+  { "technicalName": "weaver", "humanName": "Weaver", "nicknames": ["myran"] },
+  {
+    "technicalName": "ancient_apparition",
+    "humanName": "Ancient Apparition",
+    "nicknames": ["aa"]
+  },
+  { "technicalName": "bane", "humanName": "Bane", "nicknames": [] },
+  {
+    "technicalName": "batrider",
+    "humanName": "Batrider",
+    "nicknames": ["bat"]
+  },
+  { "technicalName": "chen", "humanName": "Chen", "nicknames": [] },
+  {
+    "technicalName": "dark_seer",
+    "humanName": "Dark Seer",
+    "nicknames": ["ds"]
+  },
+  {
+    "technicalName": "dark_willow",
+    "humanName": "Dark Willow",
+    "nicknames": ["willow"]
+  },
+  { "technicalName": "dazzle", "humanName": "Dazzle", "nicknames": [] },
+  {
+    "technicalName": "death_prophet",
+    "humanName": "Death Prophet",
+    "nicknames": ["dp", "krobelus"]
+  },
+  { "technicalName": "disruptor", "humanName": "Disruptor", "nicknames": [] },
+  {
+    "technicalName": "enchantress",
+    "humanName": "Enchantress",
+    "nicknames": ["ench"]
+  },
+  { "technicalName": "enigma", "humanName": "Enigma", "nicknames": [] },
+  {
+    "technicalName": "grimstroke",
+    "humanName": "Grimstroke",
+    "nicknames": ["grim", "grimpa"]
+  },
+  { "technicalName": "invoker", "humanName": "Invoker", "nicknames": ["karl"] },
+  { "technicalName": "jakiro", "humanName": "Jakiro", "nicknames": [] },
+  {
+    "technicalName": "keeper_of_the_light",
+    "humanName": "Keeper of the Light",
+    "nicknames": ["kotl", "v75"]
+  },
+  { "technicalName": "leshrac", "humanName": "Leshrac", "nicknames": ["lesh"] },
+  {
+    "technicalName": "lich",
+    "humanName": "Lich",
+    "nicknames": ["lichen", "kelthuzad"]
+  },
+  { "technicalName": "lina", "humanName": "Lina", "nicknames": ["slayer"] },
+  {
+    "technicalName": "lion",
+    "humanName": "Lion",
+    "nicknames": ["demon witch"]
+  },
+  {
+    "technicalName": "nature's_prophet",
+    "humanName": "Nature's Prophet",
+    "nicknames": ["np", "furion"]
+  },
+  {
+    "technicalName": "necrophos",
+    "humanName": "Necrophos",
+    "nicknames": ["necro", "necrolyte", "rotundjere"]
+  },
+  {
+    "technicalName": "ogre_magi",
+    "humanName": "Ogre Magi",
+    "nicknames": ["ogre"]
+  },
+  { "technicalName": "oracle", "humanName": "Oracle", "nicknames": [] },
+  {
+    "technicalName": "outworld_devourer",
+    "humanName": "Outworld Devourer",
+    "nicknames": ["od", "outworld destroyer", "obsidian destroyer"]
+  },
+  { "technicalName": "puck", "humanName": "Puck", "nicknames": [] },
+  { "technicalName": "pugna", "humanName": "Pugna", "nicknames": ["pugna"] },
+  {
+    "technicalName": "queen_of_pain",
+    "humanName": "Queen of Pain",
+    "nicknames": ["qop"]
+  },
+  { "technicalName": "rubick", "humanName": "Rubick", "nicknames": [] },
+  {
+    "technicalName": "shadow_demon",
+    "humanName": "Shadow Demon",
+    "nicknames": ["sd"]
+  },
+  {
+    "technicalName": "shadow_shaman",
+    "humanName": "Shadow Shaman",
+    "nicknames": ["ss", "rhasta"]
+  },
+  { "technicalName": "silencer", "humanName": "Silencer", "nicknames": [] },
+  {
+    "technicalName": "skywrath_mage",
+    "humanName": "Skywrath Mage",
+    "nicknames": ["sky", "skywrath"]
+  },
+  {
+    "technicalName": "storm_spirit",
+    "humanName": "Storm Spirit",
+    "nicknames": ["storm"]
+  },
+  { "technicalName": "techies", "humanName": "Techies", "nicknames": [] },
+  { "technicalName": "tinker", "humanName": "Tinker", "nicknames": [] },
+  { "technicalName": "visage", "humanName": "Visage", "nicknames": [] },
+  {
+    "technicalName": "void_spirit",
+    "humanName": "Void Spirit",
+    "nicknames": []
+  },
+  { "technicalName": "warlock", "humanName": "Warlock", "nicknames": ["lock"] },
+  {
+    "technicalName": "windranger",
+    "humanName": "Windranger",
+    "nicknames": ["wr"]
+  },
+  {
+    "technicalName": "winter_wyvern",
+    "humanName": "Winter Wyvern",
+    "nicknames": ["ww"]
+  },
+  {
+    "technicalName": "witch_doctor",
+    "humanName": "Witch Doctor",
+    "nicknames": ["wd"]
+  },
+  { "technicalName": "zeus", "humanName": "Zeus", "nicknames": [] }
+]
