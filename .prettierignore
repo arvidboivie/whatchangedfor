@@ -1,0 +1,17 @@
+.DS_Store
+build
+.build
+dist
+.serverless
+
+# Yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Handlebars not supported by prettier
+*.hbs
