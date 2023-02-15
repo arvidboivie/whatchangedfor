@@ -32,7 +32,9 @@ const app = express();
 app.set(`view engine`, `hbs`);
 
 app.get("/", (_req, res) => {
-  res.send("Hello World!");
+  res.render(`main`, {
+    heroNames: heroNames.map((heroName) => heroName.humanName),
+  });
 });
 
 app.get("*", async (req, res) => {
