@@ -1,4 +1,5 @@
 // Enable Yarn PnP
+/* eslint-disable-next-line @typescript-eslint/no-var-requires */
 require("../../.pnp.cjs").setup();
 
 import express from "express";
@@ -67,7 +68,7 @@ export async function hero(heroName: HeroName) {
 
   return rawHeroChanges.reverse().reduce<HeroChangeList>(
     (acc: HeroChangeList, changes: DynamoHero) => {
-      const { id, version, patchDate, ...changeSet } = changes;
+      const { version, patchDate, ...changeSet } = changes;
 
       const date = new Date(Number(patchDate) * 1000);
 

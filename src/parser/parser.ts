@@ -1,4 +1,5 @@
 // Enable Yarn PnP
+/* eslint-disable-next-line @typescript-eslint/no-var-requires */
 require("../../.pnp.cjs").setup();
 
 import fetch from "node-fetch";

@@ -4,23 +4,26 @@ export interface HeroName {
   nicknames: string[];
 }
 
-export function isHeroName(heroName: any): heroName is HeroName {
-  if (
-    "humanName" in heroName &&
-    "technicalName" in heroName &&
-    "nicknames" in heroName
-  ) {
+export function isHeroName(heroName: unknown): heroName is HeroName {
+  if (typeof heroName === 'object' && heroName != null) 
+  {
     if (
-      typeof heroName.humanName === "string" &&
-      typeof heroName.technicalName === "string" &&
-      Array.isArray(heroName.nicknames)
+      "humanName" in heroName &&
+      "technicalName" in heroName &&
+      "nicknames" in heroName
     ) {
-      if (heroName.nicknames.length === 0) {
-        return true;
+      if (
+        typeof heroName.humanName === "string" &&
+        typeof heroName.technicalName === "string" &&
+        Array.isArray(heroName.nicknames)
+      ) {
+        if (heroName.nicknames.length === 0) {
+          return true;
+        }
+        return (heroName.nicknames as string[]).every(
+          (value) => typeof value === "string"
+        );
       }
-      return (heroName.nicknames as string[]).every(
-        (value) => typeof value === "string"
-      );
     }
   }
 
