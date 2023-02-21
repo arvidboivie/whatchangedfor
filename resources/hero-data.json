@@ -1,26 +1,42 @@
 [
   { "technicalName": "abaddon", "humanName": "Abaddon", "nicknames": ["abba"] },
   {
-    "technicalName": "anti-mage",
-    "humanName": "Anti-Mage",
-    "nicknames": ["am", "andy", "magina"]
-  },
-  {
     "technicalName": "alchemist",
     "humanName": "Alchemist",
     "nicknames": ["alch"]
   },
-  { "technicalName": "pudge", "humanName": "Pudge", "nicknames": [] },
   {
-    "technicalName": "crystal_maiden",
-    "humanName": "Crystal Maiden",
-    "nicknames": ["cm", "rylai"]
+    "technicalName": "ancient_apparition",
+    "humanName": "Ancient Apparition",
+    "nicknames": ["aa"]
   },
+  {
+    "technicalName": "anti-mage",
+    "humanName": "Anti-Mage",
+    "nicknames": ["am", "andy", "magina"]
+  },
+  { "technicalName": "arc_warden", "humanName": "Arc Warden", "nicknames": [] },
   { "technicalName": "axe", "humanName": "Axe", "nicknames": ["mogul khan"] },
+  { "technicalName": "bane", "humanName": "Bane", "nicknames": [] },
+  {
+    "technicalName": "batrider",
+    "humanName": "Batrider",
+    "nicknames": ["bat"]
+  },
   {
     "technicalName": "beastmaster",
     "humanName": "Beastmaster",
     "nicknames": ["beast", "bm"]
+  },
+  {
+    "technicalName": "bloodseeker",
+    "humanName": "Bloodseeker",
+    "nicknames": ["bs", "strygwyr"]
+  },
+  {
+    "technicalName": "bounty_hunter",
+    "humanName": "Bounty Hunter",
+    "nicknames": ["bh", "gondar"]
   },
   {
     "technicalName": "brewmaster",
@@ -33,6 +49,11 @@
     "nicknames": ["bristle", "bb", "svinet"]
   },
   {
+    "technicalName": "broodmother",
+    "humanName": "Broodmother",
+    "nicknames": ["brood"]
+  },
+  {
     "technicalName": "centaur_warrunner",
     "humanName": "Centaur Warrunner",
     "nicknames": ["centaur", "kentaur", "kenta"]
@@ -42,21 +63,50 @@
     "humanName": "Chaos Knight",
     "nicknames": ["ck"]
   },
+  { "technicalName": "chen", "humanName": "Chen", "nicknames": [] },
+  { "technicalName": "clinkz", "humanName": "Clinkz", "nicknames": [] },
   {
     "technicalName": "clockwerk",
     "humanName": "Clockwerk",
     "nicknames": ["clock"]
   },
   {
+    "technicalName": "crystal_maiden",
+    "humanName": "Crystal Maiden",
+    "nicknames": ["cm", "rylai"]
+  },
+  {
+    "technicalName": "dark_seer",
+    "humanName": "Dark Seer",
+    "nicknames": ["ds"]
+  },
+  {
+    "technicalName": "dark_willow",
+    "humanName": "Dark Willow",
+    "nicknames": ["willow"]
+  },
+  {
     "technicalName": "dawnbreaker",
     "humanName": "Dawnbreaker",
     "nicknames": ["dawn", "hammarmamma"]
   },
+  { "technicalName": "dazzle", "humanName": "Dazzle", "nicknames": [] },
+  {
+    "technicalName": "death_prophet",
+    "humanName": "Death Prophet",
+    "nicknames": ["dp", "krobelus"]
+  },
+  { "technicalName": "disruptor", "humanName": "Disruptor", "nicknames": [] },
   { "technicalName": "doom", "humanName": "Doom", "nicknames": [] },
   {
     "technicalName": "dragon_knight",
     "humanName": "Dragon Knight",
     "nicknames": ["dk"]
+  },
+  {
+    "technicalName": "drow_ranger",
+    "humanName": "Drow Ranger",
+    "nicknames": ["drow", "trax", "traxex"]
   },
   {
     "technicalName": "earth_spirit",
@@ -74,117 +124,25 @@
     "nicknames": ["et"]
   },
   {
-    "technicalName": "huskar",
-    "humanName": "Huskar",
-    "nicknames": ["huskarr"]
-  },
-  { "technicalName": "io", "humanName": "Io", "nicknames": ["wisp"] },
-  { "technicalName": "kunkka", "humanName": "Kunkka", "nicknames": ["kapten"] },
-  {
-    "technicalName": "legion_commander",
-    "humanName": "Legion Commander",
-    "nicknames": ["legion", "lc"]
-  },
-  {
-    "technicalName": "lifestealer",
-    "humanName": "Lifestealer",
-    "nicknames": ["ls", "naix"]
-  },
-  {
-    "technicalName": "lycan",
-    "humanName": "Lycan",
-    "nicknames": ["lycanthrope", "banehallow"]
-  },
-  {
-    "technicalName": "magnus",
-    "humanName": "Magnus",
-    "nicknames": ["magnataur", "mange"]
-  },
-  { "technicalName": "marci", "humanName": "Marci", "nicknames": [] },
-  { "technicalName": "mars", "humanName": "Mars", "nicknames": ["rederiet"] },
-  {
-    "technicalName": "night_stalker",
-    "humanName": "Night Stalker",
-    "nicknames": ["ns", "balanar"]
-  },
-  {
-    "technicalName": "omniknight",
-    "humanName": "Omniknight",
-    "nicknames": ["omni"]
-  },
-  { "technicalName": "phoenix", "humanName": "Phoenix", "nicknames": [] },
-  {
-    "technicalName": "sand_king",
-    "humanName": "Sand King",
-    "nicknames": ["sk"]
-  },
-  { "technicalName": "slardar", "humanName": "Slardar", "nicknames": [] },
-  {
-    "technicalName": "snapfore",
-    "humanName": "Snapfire",
-    "nicknames": ["snap"]
-  },
-  {
-    "technicalName": "spirit_breaker",
-    "humanName": "Spirit Breaker",
-    "nicknames": ["sb", "barathrum", "springkon"]
-  },
-  { "technicalName": "sven", "humanName": "Sven", "nicknames": [] },
-  {
-    "technicalName": "tidehunter",
-    "humanName": "Tidehunter",
-    "nicknames": ["tide"]
-  },
-  {
-    "technicalName": "timbersaw",
-    "humanName": "Timbersaw",
-    "nicknames": ["timber"]
-  },
-  { "technicalName": "tiny", "humanName": "Tiny", "nicknames": [] },
-  {
-    "technicalName": "treant_protector",
-    "humanName": "Treant Protector",
-    "nicknames": ["treant", "rooftrellen"]
-  },
-  { "technicalName": "tusk", "humanName": "Tusk", "nicknames": ["tuskarr"] },
-  { "technicalName": "underlord", "humanName": "Underlord", "nicknames": [] },
-  { "technicalName": "undying", "humanName": "Undying", "nicknames": [] },
-  {
-    "technicalName": "wraith_king",
-    "humanName": "Wraith King",
-    "nicknames": ["wk", "skeleton king", "leoric"]
-  },
-  { "technicalName": "arc_warden", "humanName": "Arc Warden", "nicknames": [] },
-  {
-    "technicalName": "bloodseeker",
-    "humanName": "Bloodseeker",
-    "nicknames": ["bs", "strygwyr"]
-  },
-  {
-    "technicalName": "bounty_hunter",
-    "humanName": "Bounty Hunter",
-    "nicknames": ["bh", "gondar"]
-  },
-  {
-    "technicalName": "broodmother",
-    "humanName": "Broodmother",
-    "nicknames": ["brood"]
-  },
-  { "technicalName": "clinkz", "humanName": "Clinkz", "nicknames": [] },
-  {
-    "technicalName": "drow_ranger",
-    "humanName": "Drow Ranger",
-    "nicknames": ["drow", "trax", "traxex"]
-  },
-  {
     "technicalName": "ember_spirit",
     "humanName": "Ember Spirit",
     "nicknames": ["ember"]
   },
   {
+    "technicalName": "enchantress",
+    "humanName": "Enchantress",
+    "nicknames": ["ench"]
+  },
+  { "technicalName": "enigma", "humanName": "Enigma", "nicknames": [] },
+  {
     "technicalName": "faceless_void",
     "humanName": "Faceless Void",
     "nicknames": ["faceless", "void"]
+  },
+  {
+    "technicalName": "grimstroke",
+    "humanName": "Grimstroke",
+    "nicknames": ["grim", "grimpa"]
   },
   {
     "technicalName": "gyrocopter",
@@ -197,9 +155,45 @@
     "nicknames": ["hood", "skux", "proper skux", "ekorren"]
   },
   {
+    "technicalName": "huskar",
+    "humanName": "Huskar",
+    "nicknames": ["huskarr"]
+  },
+  { "technicalName": "invoker", "humanName": "Invoker", "nicknames": ["karl"] },
+  { "technicalName": "io", "humanName": "Io", "nicknames": ["wisp"] },
+  { "technicalName": "jakiro", "humanName": "Jakiro", "nicknames": [] },
+  {
     "technicalName": "juggernaut",
     "humanName": "Juggernaut",
     "nicknames": ["jugg", "yurnero"]
+  },
+  {
+    "technicalName": "keeper_of_the_light",
+    "humanName": "Keeper of the Light",
+    "nicknames": ["kotl", "v75"]
+  },
+  { "technicalName": "kunkka", "humanName": "Kunkka", "nicknames": ["kapten"] },
+  {
+    "technicalName": "legion_commander",
+    "humanName": "Legion Commander",
+    "nicknames": ["legion", "lc"]
+  },
+  { "technicalName": "leshrac", "humanName": "Leshrac", "nicknames": ["lesh"] },
+  {
+    "technicalName": "lich",
+    "humanName": "Lich",
+    "nicknames": ["lichen", "kelthuzad"]
+  },
+  {
+    "technicalName": "lifestealer",
+    "humanName": "Lifestealer",
+    "nicknames": ["ls", "naix"]
+  },
+  { "technicalName": "lina", "humanName": "Lina", "nicknames": ["slayer"] },
+  {
+    "technicalName": "lion",
+    "humanName": "Lion",
+    "nicknames": ["demon witch"]
   },
   {
     "technicalName": "lone_druid",
@@ -207,6 +201,18 @@
     "nicknames": ["ld", "matu", "matumbaman"]
   },
   { "technicalName": "luna", "humanName": "Luna", "nicknames": [] },
+  {
+    "technicalName": "lycan",
+    "humanName": "Lycan",
+    "nicknames": ["lycanthrope", "banehallow"]
+  },
+  {
+    "technicalName": "magnus",
+    "humanName": "Magnus",
+    "nicknames": ["magnataur", "mange"]
+  },
+  { "technicalName": "marci", "humanName": "Marci", "nicknames": [] },
+  { "technicalName": "mars", "humanName": "Mars", "nicknames": ["rederiet"] },
   { "technicalName": "medusa", "humanName": "Medusa", "nicknames": ["dusa"] },
   { "technicalName": "meepo", "humanName": "Meepo", "nicknames": [] },
   { "technicalName": "mirana", "humanName": "Mirana", "nicknames": [] },
@@ -226,9 +232,40 @@
     "nicknames": ["naga"]
   },
   {
+    "technicalName": "nature's_prophet",
+    "humanName": "Nature's Prophet",
+    "nicknames": ["np", "furion"]
+  },
+  {
+    "technicalName": "necrophos",
+    "humanName": "Necrophos",
+    "nicknames": ["necro", "necrolyte", "rotundjere"]
+  },
+  {
+    "technicalName": "night_stalker",
+    "humanName": "Night Stalker",
+    "nicknames": ["ns", "balanar"]
+  },
+  {
     "technicalName": "nyx_assassin",
     "humanName": "Nyx Assassin",
     "nicknames": ["nyx", "anubarak"]
+  },
+  {
+    "technicalName": "ogre_magi",
+    "humanName": "Ogre Magi",
+    "nicknames": ["ogre"]
+  },
+  {
+    "technicalName": "omniknight",
+    "humanName": "Omniknight",
+    "nicknames": ["omni"]
+  },
+  { "technicalName": "oracle", "humanName": "Oracle", "nicknames": [] },
+  {
+    "technicalName": "outworld_devourer",
+    "humanName": "Outworld Devourer",
+    "nicknames": ["od", "outworld destroyer", "obsidian destroyer"]
   },
   {
     "technicalName": "pangolier",
@@ -245,136 +282,32 @@
     "humanName": "Phantom Lancer",
     "nicknames": ["pl"]
   },
-  { "technicalName": "razor", "humanName": "Razor", "nicknames": [] },
-  { "technicalName": "riki", "humanName": "Riki", "nicknames": ["rikimaru"] },
-  {
-    "technicalName": "shadow_fiend",
-    "humanName": "Shadow Fiend",
-    "nicknames": ["sf", "nevermore"]
-  },
-  { "technicalName": "slark", "humanName": "Slark", "nicknames": [] },
-  { "technicalName": "sniper", "humanName": "Sniper", "nicknames": [] },
-  { "technicalName": "spectre", "humanName": "Spectre", "nicknames": [] },
-  {
-    "technicalName": "templar_assassin",
-    "humanName": "Templar Assassin",
-    "nicknames": ["ta", "lanaya"]
-  },
-  {
-    "technicalName": "terrorblade",
-    "humanName": "Terrorblade",
-    "nicknames": ["tb"]
-  },
-  {
-    "technicalName": "troll_warlord",
-    "humanName": "Troll Warlord",
-    "nicknames": ["troll"]
-  },
-  { "technicalName": "ursa", "humanName": "Ursa", "nicknames": [] },
-  {
-    "technicalName": "vengeful_spirit",
-    "humanName": "Vengeful Spirit",
-    "nicknames": ["venge"]
-  },
-  {
-    "technicalName": "venomancer",
-    "humanName": "Venomancer",
-    "nicknames": ["veno"]
-  },
-  { "technicalName": "viper", "humanName": "Viper", "nicknames": [] },
-  { "technicalName": "weaver", "humanName": "Weaver", "nicknames": ["myran"] },
-  {
-    "technicalName": "ancient_apparition",
-    "humanName": "Ancient Apparition",
-    "nicknames": ["aa"]
-  },
-  { "technicalName": "bane", "humanName": "Bane", "nicknames": [] },
-  {
-    "technicalName": "batrider",
-    "humanName": "Batrider",
-    "nicknames": ["bat"]
-  },
-  { "technicalName": "chen", "humanName": "Chen", "nicknames": [] },
-  {
-    "technicalName": "dark_seer",
-    "humanName": "Dark Seer",
-    "nicknames": ["ds"]
-  },
-  {
-    "technicalName": "dark_willow",
-    "humanName": "Dark Willow",
-    "nicknames": ["willow"]
-  },
-  { "technicalName": "dazzle", "humanName": "Dazzle", "nicknames": [] },
-  {
-    "technicalName": "death_prophet",
-    "humanName": "Death Prophet",
-    "nicknames": ["dp", "krobelus"]
-  },
-  { "technicalName": "disruptor", "humanName": "Disruptor", "nicknames": [] },
-  {
-    "technicalName": "enchantress",
-    "humanName": "Enchantress",
-    "nicknames": ["ench"]
-  },
-  { "technicalName": "enigma", "humanName": "Enigma", "nicknames": [] },
-  {
-    "technicalName": "grimstroke",
-    "humanName": "Grimstroke",
-    "nicknames": ["grim", "grimpa"]
-  },
-  { "technicalName": "invoker", "humanName": "Invoker", "nicknames": ["karl"] },
-  { "technicalName": "jakiro", "humanName": "Jakiro", "nicknames": [] },
-  {
-    "technicalName": "keeper_of_the_light",
-    "humanName": "Keeper of the Light",
-    "nicknames": ["kotl", "v75"]
-  },
-  { "technicalName": "leshrac", "humanName": "Leshrac", "nicknames": ["lesh"] },
-  {
-    "technicalName": "lich",
-    "humanName": "Lich",
-    "nicknames": ["lichen", "kelthuzad"]
-  },
-  { "technicalName": "lina", "humanName": "Lina", "nicknames": ["slayer"] },
-  {
-    "technicalName": "lion",
-    "humanName": "Lion",
-    "nicknames": ["demon witch"]
-  },
-  {
-    "technicalName": "nature's_prophet",
-    "humanName": "Nature's Prophet",
-    "nicknames": ["np", "furion"]
-  },
-  {
-    "technicalName": "necrophos",
-    "humanName": "Necrophos",
-    "nicknames": ["necro", "necrolyte", "rotundjere"]
-  },
-  {
-    "technicalName": "ogre_magi",
-    "humanName": "Ogre Magi",
-    "nicknames": ["ogre"]
-  },
-  { "technicalName": "oracle", "humanName": "Oracle", "nicknames": [] },
-  {
-    "technicalName": "outworld_devourer",
-    "humanName": "Outworld Devourer",
-    "nicknames": ["od", "outworld destroyer", "obsidian destroyer"]
-  },
+  { "technicalName": "phoenix", "humanName": "Phoenix", "nicknames": [] },
   { "technicalName": "puck", "humanName": "Puck", "nicknames": [] },
+  { "technicalName": "pudge", "humanName": "Pudge", "nicknames": [] },
   { "technicalName": "pugna", "humanName": "Pugna", "nicknames": ["pugna"] },
   {
     "technicalName": "queen_of_pain",
     "humanName": "Queen of Pain",
     "nicknames": ["qop"]
   },
+  { "technicalName": "razor", "humanName": "Razor", "nicknames": [] },
+  { "technicalName": "riki", "humanName": "Riki", "nicknames": ["rikimaru"] },
   { "technicalName": "rubick", "humanName": "Rubick", "nicknames": [] },
+  {
+    "technicalName": "sand_king",
+    "humanName": "Sand King",
+    "nicknames": ["sk"]
+  },
   {
     "technicalName": "shadow_demon",
     "humanName": "Shadow Demon",
     "nicknames": ["sd"]
+  },
+  {
+    "technicalName": "shadow_fiend",
+    "humanName": "Shadow Fiend",
+    "nicknames": ["sf", "nevermore"]
   },
   {
     "technicalName": "shadow_shaman",
@@ -387,13 +320,74 @@
     "humanName": "Skywrath Mage",
     "nicknames": ["sky", "skywrath"]
   },
+  { "technicalName": "slardar", "humanName": "Slardar", "nicknames": [] },
+  { "technicalName": "slark", "humanName": "Slark", "nicknames": [] },
+  {
+    "technicalName": "snapfore",
+    "humanName": "Snapfire",
+    "nicknames": ["snap"]
+  },
+  { "technicalName": "sniper", "humanName": "Sniper", "nicknames": [] },
+  { "technicalName": "spectre", "humanName": "Spectre", "nicknames": [] },
+  {
+    "technicalName": "spirit_breaker",
+    "humanName": "Spirit Breaker",
+    "nicknames": ["sb", "barathrum", "springkon"]
+  },
   {
     "technicalName": "storm_spirit",
     "humanName": "Storm Spirit",
     "nicknames": ["storm"]
   },
+  { "technicalName": "sven", "humanName": "Sven", "nicknames": [] },
   { "technicalName": "techies", "humanName": "Techies", "nicknames": [] },
+  {
+    "technicalName": "templar_assassin",
+    "humanName": "Templar Assassin",
+    "nicknames": ["ta", "lanaya"]
+  },
+  {
+    "technicalName": "terrorblade",
+    "humanName": "Terrorblade",
+    "nicknames": ["tb"]
+  },
+  {
+    "technicalName": "tidehunter",
+    "humanName": "Tidehunter",
+    "nicknames": ["tide"]
+  },
+  {
+    "technicalName": "timbersaw",
+    "humanName": "Timbersaw",
+    "nicknames": ["timber"]
+  },
   { "technicalName": "tinker", "humanName": "Tinker", "nicknames": [] },
+  { "technicalName": "tiny", "humanName": "Tiny", "nicknames": [] },
+  {
+    "technicalName": "treant_protector",
+    "humanName": "Treant Protector",
+    "nicknames": ["treant", "rooftrellen"]
+  },
+  {
+    "technicalName": "troll_warlord",
+    "humanName": "Troll Warlord",
+    "nicknames": ["troll"]
+  },
+  { "technicalName": "tusk", "humanName": "Tusk", "nicknames": ["tuskarr"] },
+  { "technicalName": "underlord", "humanName": "Underlord", "nicknames": [] },
+  { "technicalName": "undying", "humanName": "Undying", "nicknames": [] },
+  { "technicalName": "ursa", "humanName": "Ursa", "nicknames": [] },
+  {
+    "technicalName": "vengeful_spirit",
+    "humanName": "Vengeful Spirit",
+    "nicknames": ["venge"]
+  },
+  {
+    "technicalName": "venomancer",
+    "humanName": "Venomancer",
+    "nicknames": ["veno"]
+  },
+  { "technicalName": "viper", "humanName": "Viper", "nicknames": [] },
   { "technicalName": "visage", "humanName": "Visage", "nicknames": [] },
   {
     "technicalName": "void_spirit",
@@ -401,6 +395,7 @@
     "nicknames": []
   },
   { "technicalName": "warlock", "humanName": "Warlock", "nicknames": ["lock"] },
+  { "technicalName": "weaver", "humanName": "Weaver", "nicknames": ["myran"] },
   {
     "technicalName": "windranger",
     "humanName": "Windranger",
@@ -415,6 +410,11 @@
     "technicalName": "witch_doctor",
     "humanName": "Witch Doctor",
     "nicknames": ["wd"]
+  },
+  {
+    "technicalName": "wraith_king",
+    "humanName": "Wraith King",
+    "nicknames": ["wk", "skeleton king", "leoric"]
   },
   { "technicalName": "zeus", "humanName": "Zeus", "nicknames": [] }
 ]
