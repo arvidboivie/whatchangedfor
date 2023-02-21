@@ -5,8 +5,7 @@ export interface HeroName {
 }
 
 export function isHeroName(heroName: unknown): heroName is HeroName {
-  if (typeof heroName === 'object' && heroName != null) 
-  {
+  if (typeof heroName === "object" && heroName != null) {
     if (
       "humanName" in heroName &&
       "technicalName" in heroName &&

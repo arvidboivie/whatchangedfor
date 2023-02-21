@@ -3,10 +3,12 @@
   "scripts": {
     "test": "jest",
     "start": "serverless offline -s=staging",
+    "postinstall": "husky install",
+    "lint": "eslint --fix .",
+    "format": "prettier --write .",
     "deploy:staging": "serverless deploy -s=staging",
     "deploy:production": "serverless deploy -s=production",
-    "generate-names": "ts-node tools/generate-names.ts",
-    "postinstall": "husky install"
+    "generate-names": "ts-node tools/generate-names.ts"
   },
   "lint-staged": {
     "*.ts": "eslint --fix",
