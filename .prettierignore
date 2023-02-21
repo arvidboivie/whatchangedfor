@@ -3,6 +3,8 @@ build
 .build
 dist
 .serverless
+.husky
+.vscode
 
 # Yarn
 .yarn/*

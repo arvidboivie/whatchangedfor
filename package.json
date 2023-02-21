@@ -5,7 +5,12 @@
     "start": "serverless offline -s=staging",
     "deploy:staging": "serverless deploy -s=staging",
     "deploy:production": "serverless deploy -s=production",
-    "generate-names": "ts-node tools/generate-names.ts"
+    "generate-names": "ts-node tools/generate-names.ts",
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix",
+    "*": "prettier --ignore-unknown --write"
   },
   "engines": {
     "yarn": ">=3",
@@ -25,6 +30,8 @@
     "@typescript-eslint/parser": "latest",
     "eslint": "8.34.0",
     "eslint-config-prettier": "8.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "13.1.2",
     "prettier": "2.8.4",
     "serverless": "3.27.0",
     "serverless-offline": "8.8.1",
