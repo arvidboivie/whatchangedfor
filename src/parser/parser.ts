@@ -5,19 +5,19 @@ require("../../.pnp.cjs").setup();
 import fetch from "node-fetch";
 import { DynamoClient } from "../dynamodb/dynamodb.client";
 import {
-  Ability,
   RawAbilityChange,
-  Hero,
   Patch,
   PatchNotes,
   HeroChanges,
   AbilityChange,
   PatchNote,
+  Reference,
 } from "../interfaces";
 
 const BASE_URL = `https://www.dota2.com/datafeed`;
 const PATCH_LIST_URL = `${BASE_URL}/patchnoteslist?language=english`;
 const HERO_LIST_URL = `${BASE_URL}/herolist?language=english`;
+const ITEM_LIST_URL = `${BASE_URL}/itemlist?language=english`;
 const ABILITY_LIST_URL = `${BASE_URL}/abilitylist?language=english`;
 const SPECIFIC_PATCH_URL = (version: string) =>
   `${BASE_URL}/patchnotes?version=${version}&language=english`;
@@ -27,9 +27,10 @@ const LAST_VERSION_PATCHED = `latestVersionParsed`;
 class PatchNoteParser {
   private readonly dynamoClient: DynamoClient;
 
-  private heroList: Hero[] = [];
+  private heroList: Reference[] = [];
+  private itemList: Reference[] = [];
+  private abilityList: Reference[] = [];
   private patchList: Patch[] = [];
-  private abilityList: Ability[] = [];
 
   constructor() {
     this.dynamoClient = new DynamoClient();
@@ -69,10 +70,13 @@ class PatchNoteParser {
       await fetch(SPECIFIC_PATCH_URL(patch.patch_number))
     ).json()) as PatchNotes;
 
+    let itemChanges: HeroChanges[] = [];
+    let heroChanges: HeroChanges[] = [];
+
     if (patchNotes.heroes) {
-      const heroChanges: HeroChanges[] = patchNotes.heroes.map((hero) => {
+      heroChanges = patchNotes.heroes.map((hero) => {
         return {
-          name: this.lookupHeroName(hero.hero_id),
+          name: this.lookupReference(hero.hero_id, this.heroList),
           generalChanges: hero.hero_notes
             ? this.parseSimpleChanges(hero.hero_notes)
             : undefined,
@@ -84,13 +88,20 @@ class PatchNoteParser {
             : undefined,
         };
       });
-
-      const savePromises = heroChanges.map((hero) =>
-        this.saveChangesToDynamo(hero, patch)
-      );
-
-      await Promise.all(savePromises);
     }
+
+    if (patchNotes.items) {
+      itemChanges = patchNotes.items.map((item) => ({
+        name: this.lookupReference(item.ability_id, this.itemList),
+        generalChanges: this.parseSimpleChanges(item.ability_notes),
+      }));
+    }
+
+    const savePromises = [...heroChanges, ...itemChanges].map((hero) =>
+      this.saveChangesToDynamo(hero, patch)
+    );
+
+    await Promise.all(savePromises);
 
     await this.tagPatchAsParsed(patch);
   }
@@ -112,7 +123,7 @@ class PatchNoteParser {
   private parseAbilityChanges(abilities: RawAbilityChange[]): AbilityChange[] {
     return abilities.map((changes) => {
       return {
-        name: this.lookupAbilityName(changes.ability_id),
+        name: this.lookupReference(changes.ability_id, this.abilityList),
         changes: changes.ability_notes.map((note) => note.note),
       };
     });
@@ -122,25 +133,13 @@ class PatchNoteParser {
     return notes.map((note) => note.note);
   }
 
-  private lookupHeroName(heroId: number): string {
-    const name = this.heroList.find(
-      (hero) => hero.id === heroId
+  private lookupReference(id: number, referenceList: Reference[]) {
+    const name = referenceList.find(
+      (reference) => reference.id === id
     )?.name_english_loc;
 
     if (!name) {
-      throw Error(`Change detected for nonexisting hero`);
-    }
-
-    return name;
-  }
-
-  private lookupAbilityName(abilityId: number): string {
-    const name = this.abilityList.find(
-      (ability) => ability.id === abilityId
-    )?.name_english_loc;
-
-    if (!name) {
-      throw Error(`Change detected for nonexisting ability`);
+      throw Error(`Change detected for nonexisting reference`);
     }
 
     return name;
@@ -154,6 +153,9 @@ class PatchNoteParser {
     this.heroList = (
       await (await fetch(HERO_LIST_URL)).json()
     ).result.data.heroes;
+    this.itemList = (
+      await (await fetch(ITEM_LIST_URL)).json()
+    ).result.data.itemabilities;
     this.patchList = (await (await fetch(PATCH_LIST_URL)).json()).patches;
     this.abilityList = (
       await (await fetch(ABILITY_LIST_URL)).json()

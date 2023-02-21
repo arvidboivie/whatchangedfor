@@ -20,16 +20,17 @@ export interface RawHeroChange {
   talent_notes?: PatchNote[];
 }
 
+export interface RawItemChange {
+  ability_id: number;
+  ability_notes: PatchNote[];
+}
+
 export interface PatchNotes {
   heroes: RawHeroChange[];
+  items: RawItemChange[];
 }
 
-export interface Hero {
-  id: number;
-  name_english_loc: string;
-}
-
-export interface Ability {
+export interface Reference {
   id: number;
   name_english_loc: string;
 }
