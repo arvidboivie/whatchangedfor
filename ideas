@@ -1,0 +1,9 @@
+dynamodb keys:
+
+instead of 'latestVersionParsed : latestVersionParsed'
+use 'reference : latestVersionParsed'
+
+perhaps use 'reference : patchesParsed' with a list of patches for easy rescans of single patches
+
+implement 'reference : names'
+

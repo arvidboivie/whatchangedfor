@@ -35,6 +35,20 @@ export interface Reference {
   name_english_loc: string;
 }
 
+export type ReferenceListResponse<DataInterface> {
+  result: {
+    data: DataInterface
+  };
+}
+
+export type HeroListResponse = ReferenceListResponse<{
+  heroes: Reference[];
+}>
+
+export type ItemListResponse = ReferenceListResponse<{
+  itemabilities: Reference[]
+}>
+
 export interface HeroChanges {
   name: string;
   generalChanges?: string[];
