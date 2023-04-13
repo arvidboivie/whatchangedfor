@@ -3,6 +3,7 @@ build
 .build
 dist
 .serverless
+node_modules
 
 # Yarn
 .yarn/*
