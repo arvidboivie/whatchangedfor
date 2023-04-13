@@ -146,7 +146,10 @@ class PatchNoteParser {
   }
 
   private toSnakeCase(toSnake: string): string {
-    return toSnake.toLowerCase().replaceAll(` `, `_`);
+    return toSnake
+      .toLowerCase()
+      .replaceAll(` `, `_`)
+      .replaceAll(/[^a-z_]/g, ``);
   }
 
   private async prepareData() {
