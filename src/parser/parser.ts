@@ -130,7 +130,7 @@ class PatchNoteParser {
   }
 
   private parseSimpleChanges(notes: PatchNote[]): string[] {
-    return notes.map((note) => note.note);
+    return notes.filter((n) => n.hide_dot !== true).map((note) => note.note);
   }
 
   private lookupReference(id: number, referenceList: Reference[]) {

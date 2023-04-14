@@ -7,10 +7,10 @@ export interface RawAbilityChange {
   ability_id: number;
   ability_notes: PatchNote[];
 }
-[];
 
 export interface PatchNote {
   note: string;
+  hide_dot?: boolean;
 }
 
 export interface RawHeroChange {
@@ -20,14 +20,9 @@ export interface RawHeroChange {
   talent_notes?: PatchNote[];
 }
 
-export interface RawItemChange {
-  ability_id: number;
-  ability_notes: PatchNote[];
-}
-
 export interface PatchNotes {
   heroes: RawHeroChange[];
-  items: RawItemChange[];
+  items: RawAbilityChange[];
 }
 
 export interface Reference {
