@@ -127,17 +127,17 @@ sentry_ward;Sentry Ward; Sentry
 smoke_of_deceit;Smoke of Deceit; Smoke, Smonk
 enchanted_mango;Enchanted Mango; Mango
 faerie_fire;Faerie Fire;
-tome_of_knowledge;Tome of Knowledge;
-dust_of_appearance;Dust of Appearance;
+tome_of_knowledge;Tome of Knowledge;Tome
+dust_of_appearance;Dust of Appearance;Dust
 tango;Tango;
-healing_salve;Healing Salve;
-town_portal_scroll;Town Portal Scroll;
+healing_salve;Healing Salve;Salve
+town_portal_scroll;Town Portal Scroll;TP, scroll
 bottle;Bottle;
-aghanims_shard;Aghanim's Shard;
-iron_branch;Iron Branch;
-gauntlets_of_strength;Gauntlets of Strength;
-mantle_of_intelligence;Mantle of Intelligence;
-slippers_of_agility;Slippers of Agility;
+aghanims_shard;Aghanim's Shard;shard
+iron_branch;Iron Branch;branch
+gauntlets_of_strength;Gauntlets of Strength;gauntlet
+mantle_of_intelligence;Mantle of Intelligence;mantle
+slippers_of_agility;Slippers of Agility;slippers
 circlet;Circlet;
 band_of_elvenskin;Band of Elvenskin;
 belt_of_strength;Belt of Strength;
@@ -148,7 +148,7 @@ ogre_axe;Ogre Axe;
 staff_of_wizardry;Staff of Wizardry;
 quelling_blade;Quelling Blade;
 ring_of_protection;Ring of Protection;
-infused_raindrops;Infused Raindrops;
+infused_raindrops;Infused Raindrops;Raindrop
 orb_of_venom;Orb of Venom;
 blight_stone;Blight Stone;
 blades_of_attack;Blades of Attack;
@@ -162,20 +162,20 @@ javelin;Javelin;
 claymore;Claymore;
 mithril_hammer;Mithril Hammer;
 ring_of_regen;Ring of Regen;
-sages_mask;Sage's Mask;
-magic_stick;Magic Stick;
+sages_mask;Sage's Mask;Sobi mask
+magic_stick;Magic Stick;Stick
 fluffy_hat;Fluffy Hat;
 wind_lace;Wind Lace;
-boots_of_speed;Boots of Speed;
+boots_of_speed;Boots of Speed;boots
 cloak;Cloak;
 voodoo_mask;Voodoo Mask;
-gem_of_true_sight;Gem of True Sight;
-morbid_mask;Morbid Mask;
+gem_of_true_sight;Gem of True Sight;Gem
+morbid_mask;Morbid Mask;Mask of Death
 shadow_amulet;Shadow Amulet;
 ghost_scepter;Ghost Scepter;
-blink_dagger;Blink Dagger;
+blink_dagger;Blink Dagger;Blink
 energy_booster;Energy Booster;
-ring_of_health;Ring of Health;
+ring_of_health;Ring of Health;Rof
 void_stone;Void Stone;
 vitality_booster;Vitality Booster;
 point_booster;Point Booster;
@@ -187,58 +187,58 @@ demon_edge;Demon Edge;
 eaglesong;Eaglesong;
 mystic_staff;Mystic Staff;
 reaver;Reaver;
-sacred_relic;Sacred Relic;
-magic_wand;Magic Wand;
+sacred_relic;Sacred Relic;Relic
+magic_wand;Magic Wand;wand
 bracer;Bracer;
 null_talisman;Null Talisman;
 wraith_band;Wraith Band;
 soul_ring;Soul Ring;
 orb_of_corrosion;Orb of Corrosion;
 falcon_blade;Falcon Blade;
-power_treads;Power Treads;
+power_treads;Power Treads;PT, PTs
 oblivion_staff;Oblivion Staff;
 phase_boots;Phase Boots;
 perseverance;Perseverance;
-mask_of_madness;Mask of Madness;
-hand_of_midas;Hand of Midas;
+mask_of_madness;Mask of Madness;MoM
+hand_of_midas;Hand of Midas;Midas
 helm_of_the_dominator;Helm of the Dominator;
-boots_of_travel;Boots of Travel;
+boots_of_travel;Boots of Travel;BoT, BoTs
 moon_shard;Moon Shard;
 helm_of_the_overlord;Helm of the Overlord;
 buckler;Buckler;
 headdress;Headdress;
-ring_of_basilius;Ring of Basilius;
-urn_of_shadows;Urn of Shadows;
+ring_of_basilius;Ring of Basilius; Basi, basses ring
+urn_of_shadows;Urn of Shadows; Urn
 tranquil_boots;Tranquil Boots;
-medallion_of_courage;Medallion of Courage;
-arcane_boots;Arcane Boots;
-drum_of_endurance;Drum of Endurance;
-mekansm;Mekansm;
-holy_locket;Holy Locket;
-vladmirs_offering;Vladmir's Offering;
-spirit_vessel;Spirit Vessel;
-pipe_of_insight;Pipe of Insight;
+medallion_of_courage;Medallion of Courage; Medallion
+arcane_boots;Arcane Boots; Manaboots
+drum_of_endurance;Drum of Endurance; Drums
+mekansm;Mekansm;Mek
+holy_locket;Holy Locket; Locket
+vladmirs_offering;Vladmir's Offering; Vlads
+spirit_vessel;Spirit Vessel; Vessel
+pipe_of_insight;Pipe of Insight; Pipe
 wraith_pact;Wraith Pact;
-boots_of_bearing;Boots of Bearing;
+boots_of_bearing;Boots of Bearing; 
 guardian_greaves;Guardian Greaves;
-veil_of_discord;Veil of Discord;
+veil_of_discord;Veil of Discord;Veil
 glimmer_cape;Glimmer Cape;
-force_staff;Force Staff;
+force_staff;Force Staff; FS
 aether_lens;Aether Lens;
 witch_blade;Witch Blade;
 solar_crest;Solar Crest;
 dagon;Dagon;
-euls_scepter_of_divinity;Eul's Scepter of Divinity;
-rod_of_atos;Rod of Atos;
-orchid_malevolence;Orchid Malevolence;
-aghanims_scepter;Aghanim's Scepter;
-refresher_orb;Refresher Orb;
-octarine_core;Octarine Core;
-scythe_of_vyse;Scythe of Vyse;
-aghanims_blessing;Aghanim's Blessing;
+euls_scepter_of_divinity;Eul's Scepter of Divinity; Euls, Cyclone, Tornado
+rod_of_atos;Rod of Atos; Atos
+orchid_malevolence;Orchid Malevolence; Orchid
+aghanims_scepter;Aghanim's Scepter; Aghs, Scepter, Aghanims
+refresher_orb;Refresher Orb; Refresher
+octarine_core;Octarine Core; Octarine
+scythe_of_vyse;Scythe of Vyse; Sheepstick, Scythe
+aghanims_blessing;Aghanim's Blessing; 
 gleipnir;Gleipnir;
 wind_waker;Wind Waker;
-hood_of_defiance;Hood of Defiance;
+hood_of_defiance;Hood of Defiance; HoD, Hood
 vanguard;Vanguard;
 blade_mail;Blade Mail;
 aeon_disk;Aeon Disk;
@@ -246,27 +246,27 @@ soul_booster;Soul Booster;
 eternal_shroud;Eternal Shroud;
 crimson_guard;Crimson Guard;
 lotus_orb;Lotus Orb;
-black_king_bar;Black King Bar;
+black_king_bar;Black King Bar; BKB
 bloodstone;Bloodstone;
 hurricane_pike;Hurricane Pike;
-linkens_sphere;Linken's Sphere;
-manta_style;Manta Style;
-shivas_guard;Shiva's Guard;
-heart_of_tarrasque;Heart of Tarrasque;
-assault_cuirass;Assault Cuirass;
+linkens_sphere;Linken's Sphere; Linkens
+manta_style;Manta Style; Manta
+shivas_guard;Shiva's Guard; Shivas
+heart_of_tarrasque;Heart of Tarrasque; Heart
+assault_cuirass;Assault Cuirass; AC
 crystalys;Crystalys;
 meteor_hammer;Meteor Hammer;
-armlet_of_mordiggian;Armlet of Mordiggian;
-skull_basher;Skull Basher;
-shadow_blade;Shadow Blade;
-desolator;Desolator;
-battle_fury;Battle Fury;
+armlet_of_mordiggian;Armlet of Mordiggian; Armlet
+skull_basher;Skull Basher; Basher
+shadow_blade;Shadow Blade; Lothars, Lothars Edge
+desolator;Desolator; Deso, Stygian
+battle_fury;Battle Fury; BF
 nullifier;Nullifier;
 ethereal_blade;Ethereal Blade;
 radiance;Radiance;
 butterfly;Butterfly;
-monkey_king_bar;Monkey King Bar;
-daedalus;Daedalus;
+monkey_king_bar;Monkey King Bar; MKB
+daedalus;Daedalus; Deadalus, Buriza
 silver_edge;Silver Edge;
 divine_rapier;Divine Rapier;
 revenants_brooch;Revenant's Brooch;
@@ -285,7 +285,7 @@ kaya_and_sange;Kaya and Sange;
 sange_and_yasha;Sange and Yasha;
 yasha_and_kaya;Yasha and Kaya;
 satanic;Satanic;
-eye_of_skadi;Eye of Skadi;
+eye_of_skadi;Eye of Skadi; Skadi
 mjollnir;Mjollnir;
 arcane_blink;Arcane Blink;
 overwhelming_blink;Overwhelming Blink;
@@ -307,7 +307,7 @@ dragon_scale;Dragon Scale;
 eye_of_the_vizier;Eye of the Vizier;
 grove_bow;Grove Bow;
 nether_shawl;Nether Shawl;
-philosophers_stone;Philosopher's Stone;
+philosophers_stone;Philosopher's Stone; Philly stone
 pupils_gift;Pupil's Gift;
 ring_of_aquila;Ring of Aquila;
 specialists_array;Specialist's Array;
@@ -327,7 +327,7 @@ ascetics_cap;Ascetic's Cap;
 flicker;Flicker;
 havoc_hammer;Havoc Hammer;
 ninja_gear;Ninja Gear;
-;Penta-Edged Sword;
+pentaedged_sword;Penta-Edged Sword;
 spell_prism;Spell Prism;
 stormcrafter;Stormcrafter;
 telescope;Telescope;

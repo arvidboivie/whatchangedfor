@@ -91,6 +91,9 @@ class PatchNoteParser {
     }
 
     if (patchNotes.items) {
+      if (patchNotes.neutral_items) {
+        patchNotes.items = [...patchNotes.items, ...patchNotes.neutral_items];
+      }
       itemChanges = patchNotes.items.map((item) => ({
         name: this.lookupReference(item.ability_id, this.itemList),
         generalChanges: this.parseSimpleChanges(item.ability_notes),

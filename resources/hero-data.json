@@ -446,49 +446,49 @@
   {
     "technicalName": "tome_of_knowledge",
     "humanName": "Tome of Knowledge",
-    "nicknames": []
+    "nicknames": ["tome"]
   },
   {
     "technicalName": "dust_of_appearance",
     "humanName": "Dust of Appearance",
-    "nicknames": []
+    "nicknames": ["dust"]
   },
   { "technicalName": "tango", "humanName": "Tango", "nicknames": [] },
   {
     "technicalName": "healing_salve",
     "humanName": "Healing Salve",
-    "nicknames": []
+    "nicknames": ["salve"]
   },
   {
     "technicalName": "town_portal_scroll",
     "humanName": "Town Portal Scroll",
-    "nicknames": []
+    "nicknames": ["tp", "scroll"]
   },
   { "technicalName": "bottle", "humanName": "Bottle", "nicknames": [] },
   {
     "technicalName": "aghanims_shard",
     "humanName": "Aghanim's Shard",
-    "nicknames": []
+    "nicknames": ["shard"]
   },
   {
     "technicalName": "iron_branch",
     "humanName": "Iron Branch",
-    "nicknames": []
+    "nicknames": ["branch"]
   },
   {
     "technicalName": "gauntlets_of_strength",
     "humanName": "Gauntlets of Strength",
-    "nicknames": []
+    "nicknames": ["gauntlet"]
   },
   {
     "technicalName": "mantle_of_intelligence",
     "humanName": "Mantle of Intelligence",
-    "nicknames": []
+    "nicknames": ["mantle"]
   },
   {
     "technicalName": "slippers_of_agility",
     "humanName": "Slippers of Agility",
-    "nicknames": []
+    "nicknames": ["slippers"]
   },
   { "technicalName": "circlet", "humanName": "Circlet", "nicknames": [] },
   {
@@ -531,7 +531,7 @@
   {
     "technicalName": "infused_raindrops",
     "humanName": "Infused Raindrops",
-    "nicknames": []
+    "nicknames": ["raindrop"]
   },
   {
     "technicalName": "orb_of_venom",
@@ -585,19 +585,19 @@
   {
     "technicalName": "sages_mask",
     "humanName": "Sage's Mask",
-    "nicknames": []
+    "nicknames": ["sobi mask"]
   },
   {
     "technicalName": "magic_stick",
     "humanName": "Magic Stick",
-    "nicknames": []
+    "nicknames": ["stick"]
   },
   { "technicalName": "fluffy_hat", "humanName": "Fluffy Hat", "nicknames": [] },
   { "technicalName": "wind_lace", "humanName": "Wind Lace", "nicknames": [] },
   {
     "technicalName": "boots_of_speed",
     "humanName": "Boots of Speed",
-    "nicknames": []
+    "nicknames": ["boots"]
   },
   { "technicalName": "cloak", "humanName": "Cloak", "nicknames": [] },
   {
@@ -608,12 +608,12 @@
   {
     "technicalName": "gem_of_true_sight",
     "humanName": "Gem of True Sight",
-    "nicknames": []
+    "nicknames": ["gem"]
   },
   {
     "technicalName": "morbid_mask",
     "humanName": "Morbid Mask",
-    "nicknames": []
+    "nicknames": ["mask of death"]
   },
   {
     "technicalName": "shadow_amulet",
@@ -628,7 +628,7 @@
   {
     "technicalName": "blink_dagger",
     "humanName": "Blink Dagger",
-    "nicknames": []
+    "nicknames": ["blink"]
   },
   {
     "technicalName": "energy_booster",
@@ -638,7 +638,7 @@
   {
     "technicalName": "ring_of_health",
     "humanName": "Ring of Health",
-    "nicknames": []
+    "nicknames": ["rof"]
   },
   { "technicalName": "void_stone", "humanName": "Void Stone", "nicknames": [] },
   {
@@ -674,9 +674,13 @@
   {
     "technicalName": "sacred_relic",
     "humanName": "Sacred Relic",
-    "nicknames": []
+    "nicknames": ["relic"]
   },
-  { "technicalName": "magic_wand", "humanName": "Magic Wand", "nicknames": [] },
+  {
+    "technicalName": "magic_wand",
+    "humanName": "Magic Wand",
+    "nicknames": ["wand"]
+  },
   { "technicalName": "bracer", "humanName": "Bracer", "nicknames": [] },
   {
     "technicalName": "null_talisman",
@@ -702,7 +706,7 @@
   {
     "technicalName": "power_treads",
     "humanName": "Power Treads",
-    "nicknames": []
+    "nicknames": ["pt", "pts"]
   },
   {
     "technicalName": "oblivion_staff",
@@ -722,12 +726,12 @@
   {
     "technicalName": "mask_of_madness",
     "humanName": "Mask of Madness",
-    "nicknames": []
+    "nicknames": ["mom"]
   },
   {
     "technicalName": "hand_of_midas",
     "humanName": "Hand of Midas",
-    "nicknames": []
+    "nicknames": ["midas"]
   },
   {
     "technicalName": "helm_of_the_dominator",
@@ -737,7 +741,7 @@
   {
     "technicalName": "boots_of_travel",
     "humanName": "Boots of Travel",
-    "nicknames": []
+    "nicknames": ["bot", "bots"]
   },
   { "technicalName": "moon_shard", "humanName": "Moon Shard", "nicknames": [] },
   {
@@ -750,12 +754,12 @@
   {
     "technicalName": "ring_of_basilius",
     "humanName": "Ring of Basilius",
-    "nicknames": []
+    "nicknames": ["basi", "basses ring"]
   },
   {
     "technicalName": "urn_of_shadows",
     "humanName": "Urn of Shadows",
-    "nicknames": []
+    "nicknames": ["urn"]
   },
   {
     "technicalName": "tranquil_boots",
@@ -765,38 +769,38 @@
   {
     "technicalName": "medallion_of_courage",
     "humanName": "Medallion of Courage",
-    "nicknames": []
+    "nicknames": ["medallion"]
   },
   {
     "technicalName": "arcane_boots",
     "humanName": "Arcane Boots",
-    "nicknames": []
+    "nicknames": ["manaboots"]
   },
   {
     "technicalName": "drum_of_endurance",
     "humanName": "Drum of Endurance",
-    "nicknames": []
+    "nicknames": ["drums"]
   },
-  { "technicalName": "mekansm", "humanName": "Mekansm", "nicknames": [] },
+  { "technicalName": "mekansm", "humanName": "Mekansm", "nicknames": ["mek"] },
   {
     "technicalName": "holy_locket",
     "humanName": "Holy Locket",
-    "nicknames": []
+    "nicknames": ["locket"]
   },
   {
     "technicalName": "vladmirs_offering",
     "humanName": "Vladmir's Offering",
-    "nicknames": []
+    "nicknames": ["vlads"]
   },
   {
     "technicalName": "spirit_vessel",
     "humanName": "Spirit Vessel",
-    "nicknames": []
+    "nicknames": ["vessel"]
   },
   {
     "technicalName": "pipe_of_insight",
     "humanName": "Pipe of Insight",
-    "nicknames": []
+    "nicknames": ["pipe"]
   },
   {
     "technicalName": "wraith_pact",
@@ -816,7 +820,7 @@
   {
     "technicalName": "veil_of_discord",
     "humanName": "Veil of Discord",
-    "nicknames": []
+    "nicknames": ["veil"]
   },
   {
     "technicalName": "glimmer_cape",
@@ -826,7 +830,7 @@
   {
     "technicalName": "force_staff",
     "humanName": "Force Staff",
-    "nicknames": []
+    "nicknames": ["fs"]
   },
   {
     "technicalName": "aether_lens",
@@ -847,37 +851,37 @@
   {
     "technicalName": "euls_scepter_of_divinity",
     "humanName": "Eul's Scepter of Divinity",
-    "nicknames": []
+    "nicknames": ["euls", "cyclone", "tornado"]
   },
   {
     "technicalName": "rod_of_atos",
     "humanName": "Rod of Atos",
-    "nicknames": []
+    "nicknames": ["atos"]
   },
   {
     "technicalName": "orchid_malevolence",
     "humanName": "Orchid Malevolence",
-    "nicknames": []
+    "nicknames": ["orchid"]
   },
   {
     "technicalName": "aghanims_scepter",
     "humanName": "Aghanim's Scepter",
-    "nicknames": []
+    "nicknames": ["aghs", "scepter", "aghanims"]
   },
   {
     "technicalName": "refresher_orb",
     "humanName": "Refresher Orb",
-    "nicknames": []
+    "nicknames": ["refresher"]
   },
   {
     "technicalName": "octarine_core",
     "humanName": "Octarine Core",
-    "nicknames": []
+    "nicknames": ["octarine"]
   },
   {
     "technicalName": "scythe_of_vyse",
     "humanName": "Scythe of Vyse",
-    "nicknames": []
+    "nicknames": ["sheepstick", "scythe"]
   },
   {
     "technicalName": "aghanims_blessing",
@@ -889,7 +893,7 @@
   {
     "technicalName": "hood_of_defiance",
     "humanName": "Hood of Defiance",
-    "nicknames": []
+    "nicknames": ["hod", "hood"]
   },
   { "technicalName": "vanguard", "humanName": "Vanguard", "nicknames": [] },
   { "technicalName": "blade_mail", "humanName": "Blade Mail", "nicknames": [] },
@@ -913,7 +917,7 @@
   {
     "technicalName": "black_king_bar",
     "humanName": "Black King Bar",
-    "nicknames": []
+    "nicknames": ["bkb"]
   },
   { "technicalName": "bloodstone", "humanName": "Bloodstone", "nicknames": [] },
   {
@@ -924,27 +928,27 @@
   {
     "technicalName": "linkens_sphere",
     "humanName": "Linken's Sphere",
-    "nicknames": []
+    "nicknames": ["linkens"]
   },
   {
     "technicalName": "manta_style",
     "humanName": "Manta Style",
-    "nicknames": []
+    "nicknames": ["manta"]
   },
   {
     "technicalName": "shivas_guard",
     "humanName": "Shiva's Guard",
-    "nicknames": []
+    "nicknames": ["shivas"]
   },
   {
     "technicalName": "heart_of_tarrasque",
     "humanName": "Heart of Tarrasque",
-    "nicknames": []
+    "nicknames": ["heart"]
   },
   {
     "technicalName": "assault_cuirass",
     "humanName": "Assault Cuirass",
-    "nicknames": []
+    "nicknames": ["ac"]
   },
   { "technicalName": "crystalys", "humanName": "Crystalys", "nicknames": [] },
   {
@@ -955,23 +959,27 @@
   {
     "technicalName": "armlet_of_mordiggian",
     "humanName": "Armlet of Mordiggian",
-    "nicknames": []
+    "nicknames": ["armlet"]
   },
   {
     "technicalName": "skull_basher",
     "humanName": "Skull Basher",
-    "nicknames": []
+    "nicknames": ["basher"]
   },
   {
     "technicalName": "shadow_blade",
     "humanName": "Shadow Blade",
-    "nicknames": []
+    "nicknames": ["lothars", "lothars edge"]
   },
-  { "technicalName": "desolator", "humanName": "Desolator", "nicknames": [] },
+  {
+    "technicalName": "desolator",
+    "humanName": "Desolator",
+    "nicknames": ["deso", "stygian"]
+  },
   {
     "technicalName": "battle_fury",
     "humanName": "Battle Fury",
-    "nicknames": []
+    "nicknames": ["bf"]
   },
   { "technicalName": "nullifier", "humanName": "Nullifier", "nicknames": [] },
   {
@@ -984,9 +992,13 @@
   {
     "technicalName": "monkey_king_bar",
     "humanName": "Monkey King Bar",
-    "nicknames": []
+    "nicknames": ["mkb"]
   },
-  { "technicalName": "daedalus", "humanName": "Daedalus", "nicknames": [] },
+  {
+    "technicalName": "daedalus",
+    "humanName": "Daedalus",
+    "nicknames": ["deadalus", "buriza"]
+  },
   {
     "technicalName": "silver_edge",
     "humanName": "Silver Edge",
@@ -1052,7 +1064,7 @@
   {
     "technicalName": "eye_of_skadi",
     "humanName": "Eye of Skadi",
-    "nicknames": []
+    "nicknames": ["skadi"]
   },
   { "technicalName": "mjollnir", "humanName": "Mjollnir", "nicknames": [] },
   {
@@ -1146,7 +1158,7 @@
   {
     "technicalName": "philosophers_stone",
     "humanName": "Philosopher's Stone",
-    "nicknames": []
+    "nicknames": ["philly stone"]
   },
   {
     "technicalName": "pupils_gift",
@@ -1227,7 +1239,11 @@
     "nicknames": []
   },
   { "technicalName": "ninja_gear", "humanName": "Ninja Gear", "nicknames": [] },
-  { "technicalName": "", "humanName": "Penta-Edged Sword", "nicknames": [] },
+  {
+    "technicalName": "pentaedged_sword",
+    "humanName": "Penta-Edged Sword",
+    "nicknames": []
+  },
   {
     "technicalName": "spell_prism",
     "humanName": "Spell Prism",

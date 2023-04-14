@@ -23,6 +23,7 @@ export interface RawHeroChange {
 export interface PatchNotes {
   heroes: RawHeroChange[];
   items: RawAbilityChange[];
+  neutral_items?: RawAbilityChange[];
 }
 
 export interface Reference {
