@@ -2474,6 +2474,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/hbs@npm:4.0.1":
+  version: 4.0.1
+  resolution: "@types/hbs@npm:4.0.1"
+  dependencies:
+    handlebars: ^4.1.0
+  checksum: 28eae02b0a4133b0864096a59ca7e4573bcacebd9a0412c56428d06fe6ed42aa041d0cc57124551aecb841e08533ca3bdca7998d13cf44ba98ffdf32bff67fa5
+  languageName: node
+  linkType: hard
+
 "@types/http-cache-semantics@npm:*":
   version: 4.0.1
   resolution: "@types/http-cache-semantics@npm:4.0.1"
@@ -5265,6 +5274,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fuzzysort@npm:2.0.4":
+  version: 2.0.4
+  resolution: "fuzzysort@npm:2.0.4"
+  checksum: 5c498ec452ffc75c4368c52a7c4a490fc4d4129d94eab5f892d7e69d91ee3057259d9ab6924f14cca21f5731e7d91912e6c01669b40ef9b2165924e4b8e65fb5
+  languageName: node
+  linkType: hard
+
 "gauge@npm:^4.0.3":
   version: 4.0.4
   resolution: "gauge@npm:4.0.4"
@@ -5488,7 +5504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars@npm:4.7.7":
+"handlebars@npm:4.7.7, handlebars@npm:^4.1.0":
   version: 4.7.7
   resolution: "handlebars@npm:4.7.7"
   dependencies:
@@ -9872,6 +9888,7 @@ __metadata:
     "@types/aws-lambda": 8.10.110
     "@types/eslint": ^8
     "@types/express": 4.17.17
+    "@types/hbs": 4.0.1
     "@types/jest": 29.4.0
     "@types/node": 18.13.0
     "@types/node-fetch": 2.6.2
@@ -9883,6 +9900,7 @@ __metadata:
     eslint: 8.34.0
     eslint-config-prettier: 8.6.0
     express: 4.18.2
+    fuzzysort: 2.0.4
     hbs: 4.2.0
     husky: ^8.0.0
     jest: 29.4.3

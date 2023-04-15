@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/aws-lambda", "npm:8.10.110"],\
             ["@types/eslint", "npm:8.21.1"],\
             ["@types/express", "npm:4.17.17"],\
+            ["@types/hbs", "npm:4.0.1"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/node", "npm:18.13.0"],\
             ["@types/node-fetch", "npm:2.6.2"],\
@@ -47,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.34.0"],\
             ["eslint-config-prettier", "virtual:958819dc216eb0e46ffacfee3f73ffdeaa9a0843f8717ccaa627f8b913f6020184137e1423d56dccc4eecdba7d79ef3afe098c21ebd845dff6f3f34df85396ea#npm:8.6.0"],\
             ["express", "npm:4.18.2"],\
+            ["fuzzysort", "npm:2.0.4"],\
             ["hbs", "npm:4.2.0"],\
             ["husky", "npm:8.0.3"],\
             ["jest", "virtual:958819dc216eb0e46ffacfee3f73ffdeaa9a0843f8717ccaa627f8b913f6020184137e1423d56dccc4eecdba7d79ef3afe098c21ebd845dff6f3f34df85396ea#npm:29.4.3"],\
@@ -3130,6 +3132,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/graceful-fs", "npm:4.1.6"],\
             ["@types/node", "npm:18.13.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/hbs", [\
+        ["npm:4.0.1", {\
+          "packageLocation": "./.yarn/cache/@types-hbs-npm-4.0.1-e04b2e0668-28eae02b0a.zip/node_modules/@types/hbs/",\
+          "packageDependencies": [\
+            ["@types/hbs", "npm:4.0.1"],\
+            ["handlebars", "npm:4.7.7"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6479,6 +6491,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/function-bind-npm-1.1.1-b56b322ae9-b32fbaebb3.zip/node_modules/function-bind/",\
           "packageDependencies": [\
             ["function-bind", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["fuzzysort", [\
+        ["npm:2.0.4", {\
+          "packageLocation": "./.yarn/cache/fuzzysort-npm-2.0.4-e5d0285b2d-5c498ec452.zip/node_modules/fuzzysort/",\
+          "packageDependencies": [\
+            ["fuzzysort", "npm:2.0.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11740,6 +11761,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/aws-lambda", "npm:8.10.110"],\
             ["@types/eslint", "npm:8.21.1"],\
             ["@types/express", "npm:4.17.17"],\
+            ["@types/hbs", "npm:4.0.1"],\
             ["@types/jest", "npm:29.4.0"],\
             ["@types/node", "npm:18.13.0"],\
             ["@types/node-fetch", "npm:2.6.2"],\
@@ -11751,6 +11773,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.34.0"],\
             ["eslint-config-prettier", "virtual:958819dc216eb0e46ffacfee3f73ffdeaa9a0843f8717ccaa627f8b913f6020184137e1423d56dccc4eecdba7d79ef3afe098c21ebd845dff6f3f34df85396ea#npm:8.6.0"],\
             ["express", "npm:4.18.2"],\
+            ["fuzzysort", "npm:2.0.4"],\
             ["hbs", "npm:4.2.0"],\
             ["husky", "npm:8.0.3"],\
             ["jest", "virtual:958819dc216eb0e46ffacfee3f73ffdeaa9a0843f8717ccaa627f8b913f6020184137e1423d56dccc4eecdba7d79ef3afe098c21ebd845dff6f3f34df85396ea#npm:29.4.3"],\

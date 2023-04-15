@@ -1,0 +1,46 @@
+<script>
+  const heroNames = [{{#each heroNames}}"{{{this}}}", {{/each}}]
+
+    let input = document.getElementById("name");
+    //Execute function on keyup
+    input.addEventListener("keyup", search);
+
+    function search() {
+      removeElements();
+
+      if (this.value !== "") {
+        const results = fuzzysort.go(this.value, heroNames, { threshold: -1000 });
+
+        if (results.length === 1) {
+          location.assign(`/${results[0].target}`);
+          // Crude way of disabling multiple redirects
+          this.removeEventListener("keyup", search);
+        }
+
+        for (const result of results) {
+          //create li element
+          let listItem = document.createElement("li");
+          //One common class name
+          listItem.classList.add("list-items");
+          listItem.style.cursor = "pointer";
+          listItem.onclick = chooseName;
+          listItem.setAttribute("data-name", `${result.target}`);
+          //display the value in array
+          listItem.innerHTML = fuzzysort.highlight(result, `<u>`, `</u>`);
+          document.querySelector(".list").appendChild(listItem);
+        }
+      }
+    }
+
+    function chooseName() {
+      location.assign(`/${this.getAttribute("data-name")}`);
+    }
+
+    function removeElements() {
+      //clear all the item
+      let items = document.querySelectorAll(".list-items");
+      items.forEach((item) => {
+        item.remove();
+      });
+    }
+</script>

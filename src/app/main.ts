@@ -9,6 +9,7 @@ import { DynamoClient } from "../dynamodb/dynamodb.client";
 import { AbilityChange, HeroChanges } from "../interfaces";
 import { HeroName } from "./hero.interfaces";
 import { HeroService } from "./hero.service";
+import hbs from "hbs";
 
 interface DynamoHero {
   version: string;
@@ -32,6 +33,8 @@ const app = express();
 
 app.set(`view engine`, `hbs`);
 
+hbs.registerPartials(`${__dirname}/../../views/partials`);
+
 app.get("/", (_req, res) => {
   res.render(`main`, {
     heroNames: heroNames.map((heroName) => heroName.humanName),
@@ -46,7 +49,10 @@ app.get("*", async (req, res) => {
   if (heroName !== undefined) {
     const changeSet = await hero(heroName);
 
-    res.render(`hero`, { changeSet });
+    res.render(`hero`, {
+      changeSet,
+      heroNames: heroNames.map((heroName) => heroName.humanName),
+    });
     return;
   }
 

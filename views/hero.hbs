@@ -1,71 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"></noscript>
-
-
-  <style>
-    @font-face {
-      font-family: 'Radiance'; /*a name to be used later*/
-      src: url('https://arbo-webfonts.s3.eu-central-1.amazonaws.com/radiance.woff'); /*URL to font*/
-      }
-
-    @font-face {
-        font-family: 'Reaver'; /*a name to be used later*/
-        src: url('https://arbo-webfonts.s3.eu-central-1.amazonaws.com/Reaver-SemiBold.woff'); /*URL to font*/
-    }
-
-    html {
-      background-color: #151618;
-    }
-
-    .pageTitle {
-      color: #ed3b1c;
-      font-family: "Reaver","Noto Sans",sans-serif;
-      text-transform: capitalize;
-    }
-
-    .patch {
-      color:#fff;
-      font-family: "Radiance","Noto Sans",sans-serif;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .abilityName {
-      font-family: "Reaver","Noto Sans",sans-serif;
-    }
-
-    .version {
-      color: #ed3b1c;
-      font-size: larger;
-    }
-
-    .date {  
-      color: #bbbbbbee;
-      float: right;
-      font-size: larger;
-    }
-
-    .changeNote {
-      color: #bbbbbbee;
-    }
-
-
-  </style>
+  {{> header_partial}}
 
   <title>Dota 2 - {{changeSet.name}} Changelog</title>
 </head>
 <body>
-  {{#with changeSet}}
   <div class="container">
+  {{> search_partial_html}}
+  {{#with changeSet}}
   <h1 class="pageTitle">{{name}}</h1>
     {{#each changes}}
       <div class="patch">
@@ -108,4 +51,5 @@
   {{/with}}
   </div>
 </body>
+{{> search_partial_script}}
 </html>
