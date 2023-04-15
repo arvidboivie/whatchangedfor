@@ -27,7 +27,7 @@
           listItem.setAttribute("data-name", `${result.target}`);
           //display the value in array
           listItem.innerHTML = fuzzysort.highlight(result, `<u>`, `</u>`);
-          document.querySelector(".list").appendChild(listItem);
+          document.querySelector(".result-list").appendChild(listItem);
         }
       }
     }
