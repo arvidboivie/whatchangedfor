@@ -12,6 +12,8 @@ import {
   AbilityChange,
   PatchNote,
   Reference,
+  ApiDataResponse,
+  ApiPatchResponse,
 } from "../interfaces";
 
 const BASE_URL = `https://www.dota2.com/datafeed`;
@@ -157,14 +159,16 @@ class PatchNoteParser {
 
   private async prepareData() {
     this.heroList = (
-      await (await fetch(HERO_LIST_URL)).json()
+      (await (await fetch(HERO_LIST_URL)).json()) as ApiDataResponse
     ).result.data.heroes;
     this.itemList = (
-      await (await fetch(ITEM_LIST_URL)).json()
+      (await (await fetch(ITEM_LIST_URL)).json()) as ApiDataResponse
     ).result.data.itemabilities;
-    this.patchList = (await (await fetch(PATCH_LIST_URL)).json()).patches;
+    this.patchList = (
+      (await (await fetch(PATCH_LIST_URL)).json()) as ApiPatchResponse
+    ).patches;
     this.abilityList = (
-      await (await fetch(ABILITY_LIST_URL)).json()
+      (await (await fetch(ABILITY_LIST_URL)).json()) as ApiDataResponse
     ).result.data.itemabilities;
   }
 }

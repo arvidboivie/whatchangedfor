@@ -31,6 +31,19 @@ export interface Reference {
   name_english_loc: string;
 }
 
+export interface ApiDataResponse {
+  result: {
+    data: {
+      heroes: Reference[];
+      itemabilities: Reference[];
+    };
+  };
+}
+
+export interface ApiPatchResponse {
+  patches: Patch[];
+}
+
 export interface HeroChanges {
   name: string;
   generalChanges?: string[];
