@@ -2,7 +2,7 @@
   "name": "whatchangedfor",
   "scripts": {
     "test": "jest",
-    "start": "serverless offline -s=staging",
+    "start": "rm -rf .build && serverless offline -s=staging",
     "postinstall": "husky install",
     "lint": "eslint --fix .",
     "format": "prettier --write .",
