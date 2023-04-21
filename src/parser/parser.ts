@@ -24,6 +24,8 @@ const ABILITY_LIST_URL = `${BASE_URL}/abilitylist?language=english`;
 const SPECIFIC_PATCH_URL = (version: string) =>
   `${BASE_URL}/patchnotes?version=${version}&language=english`;
 
+const UNKNOWN_TOKEN = "unknown";
+
 const LAST_VERSION_PATCHED = `latestVersionParsed`;
 
 class PatchNoteParser {
@@ -77,8 +79,10 @@ class PatchNoteParser {
 
     if (patchNotes.heroes) {
       heroChanges = patchNotes.heroes.map((hero) => {
+        const heroName = this.lookupReference(hero.hero_id, this.heroList);
+
         return {
-          name: this.lookupReference(hero.hero_id, this.heroList),
+          name: heroName ?? UNKNOWN_TOKEN,
           generalChanges: hero.hero_notes
             ? this.parseSimpleChanges(hero.hero_notes)
             : undefined,
@@ -96,10 +100,14 @@ class PatchNoteParser {
       if (patchNotes.neutral_items) {
         patchNotes.items = [...patchNotes.items, ...patchNotes.neutral_items];
       }
-      itemChanges = patchNotes.items.map((item) => ({
-        name: this.lookupReference(item.ability_id, this.itemList),
-        generalChanges: this.parseSimpleChanges(item.ability_notes),
-      }));
+      itemChanges = patchNotes.items.map((item) => {
+        const itemName = this.lookupReference(item.ability_id, this.itemList);
+
+        return {
+          name: itemName ?? UNKNOWN_TOKEN,
+          generalChanges: this.parseSimpleChanges(item.ability_notes),
+        };
+      });
     }
 
     const savePromises = [...heroChanges, ...itemChanges].map((hero) =>
@@ -127,8 +135,13 @@ class PatchNoteParser {
 
   private parseAbilityChanges(abilities: RawAbilityChange[]): AbilityChange[] {
     return abilities.map((changes) => {
+      const abilityName = this.lookupReference(
+        changes.ability_id,
+        this.abilityList
+      );
+
       return {
-        name: this.lookupReference(changes.ability_id, this.abilityList),
+        name: abilityName ?? "Unknown Ability",
         changes: changes.ability_notes.map((note) => note.note),
       };
     });
@@ -144,7 +157,7 @@ class PatchNoteParser {
     )?.name_english_loc;
 
     if (!name) {
-      throw Error(`Change detected for nonexisting reference`);
+      console.warn(`Change detected for nonexisting reference:`, { id });
     }
 
     return name;
