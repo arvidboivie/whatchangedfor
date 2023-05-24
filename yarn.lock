@@ -2805,6 +2805,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jest/types@npm:^26.6.2":
+  version: 26.6.2
+  resolution: "@jest/types@npm:26.6.2"
+  dependencies:
+    "@types/istanbul-lib-coverage": ^2.0.0
+    "@types/istanbul-reports": ^3.0.0
+    "@types/node": "*"
+    "@types/yargs": ^15.0.0
+    chalk: ^4.0.0
+  checksum: a0bd3d2f22f26ddb23f41fddf6e6a30bf4fab2ce79ec1cb6ce6fdfaf90a72e00f4c71da91ec61e13db3b10c41de22cf49d07c57ff2b59171d64b29f909c1d8d6
+  languageName: node
+  linkType: hard
+
 "@jest/types@npm:^28.1.3":
   version: 28.1.3
   resolution: "@jest/types@npm:28.1.3"
@@ -3586,6 +3599,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/yargs@npm:^15.0.0":
+  version: 15.0.15
+  resolution: "@types/yargs@npm:15.0.15"
+  dependencies:
+    "@types/yargs-parser": "*"
+  checksum: 3420f6bcc508a895ef91858f8e6de975c710e4498cf6ed293f1174d3f1ad56edb4ab8481219bf6190f64a3d4115fab1d13ab3edc90acd54fba7983144040e446
+  languageName: node
+  linkType: hard
+
 "@types/yargs@npm:^17.0.8":
   version: 17.0.24
   resolution: "@types/yargs@npm:17.0.24"
@@ -3745,6 +3767,7 @@ __metadata:
     fastify-plugin: ~4.5.0
     jest: ^29.4.1
     jest-environment-node: ^29.4.1
+    jest-silent-reporter: ^0.5.0
     nx: 16.2.2
     prettier: ^2.6.2
     ts-jest: ^29.1.0
@@ -4452,6 +4475,13 @@ __metadata:
   version: 2.0.0
   resolution: "chownr@npm:2.0.0"
   checksum: c57cf9dd0791e2f18a5ee9c1a299ae6e801ff58fee96dc8bfd0dcb4738a6ce58dd252a3605b1c93c6418fe4f9d5093b28ffbf4d66648cb2a9c67eaef9679be2f
+  languageName: node
+  linkType: hard
+
+"ci-info@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ci-info@npm:2.0.0"
+  checksum: 3b374666a85ea3ca43fa49aa3a048d21c9b475c96eb13c133505d2324e7ae5efd6a454f41efe46a152269e9b6a00c9edbe63ec7fa1921957165aae16625acd67
   languageName: node
   linkType: hard
 
@@ -5677,7 +5707,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
+"graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: ac85f94da92d8eb6b7f5a8b20ce65e43d66761c55ce85ac96df6865308390da45a8d3f0296dd3a663de65d30ba497bd46c696cc1e248c72b13d6d567138a4fc7
@@ -5911,6 +5941,17 @@ __metadata:
   dependencies:
     binary-extensions: ^2.0.0
   checksum: 84192eb88cff70d320426f35ecd63c3d6d495da9d805b19bc65b518984b7c0760280e57dbf119b7e9be6b161784a5a673ab2c6abe83abb5198a432232ad5b35c
+  languageName: node
+  linkType: hard
+
+"is-ci@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "is-ci@npm:2.0.0"
+  dependencies:
+    ci-info: ^2.0.0
+  bin:
+    is-ci: bin.js
+  checksum: 77b869057510f3efa439bbb36e9be429d53b3f51abd4776eeea79ab3b221337fe1753d1e50058a9e2c650d38246108beffb15ccfd443929d77748d8c0cc90144
   languageName: node
   linkType: hard
 
@@ -6456,6 +6497,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jest-silent-reporter@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "jest-silent-reporter@npm:0.5.0"
+  dependencies:
+    chalk: ^4.0.0
+    jest-util: ^26.0.0
+  checksum: 54853eb1fd342eb074ff97bbd2f177c3425e635deb008ce1a5feede398930b6472549797342e3ea536f8e2e538d8718d6f281f3d44dec2ae4d32f61da0eb547e
+  languageName: node
+  linkType: hard
+
 "jest-snapshot@npm:^29.5.0":
   version: 29.5.0
   resolution: "jest-snapshot@npm:29.5.0"
@@ -6484,6 +6535,20 @@ __metadata:
     pretty-format: ^29.5.0
     semver: ^7.3.5
   checksum: fe5df54122ed10eed625de6416a45bc4958d5062b018f05b152bf9785ab7f355dcd55e40cf5da63895bf8278f8d7b2bb4059b2cfbfdee18f509d455d37d8aa2b
+  languageName: node
+  linkType: hard
+
+"jest-util@npm:^26.0.0":
+  version: 26.6.2
+  resolution: "jest-util@npm:26.6.2"
+  dependencies:
+    "@jest/types": ^26.6.2
+    "@types/node": "*"
+    chalk: ^4.0.0
+    graceful-fs: ^4.2.4
+    is-ci: ^2.0.0
+    micromatch: ^4.0.2
+  checksum: 3c6a5fba05c4c6892cd3a9f66196ea8867087b77a5aa1a3f6cd349c785c3f1ca24abfd454664983aed1a165cab7846688e44fe8630652d666ba326b08625bc3d
   languageName: node
   linkType: hard
 
@@ -6879,7 +6944,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.4":
+"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4":
   version: 4.0.5
   resolution: "micromatch@npm:4.0.5"
   dependencies:
