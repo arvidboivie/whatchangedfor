@@ -1,15 +1,3 @@
-.DS_Store
-build
-.build
-dist
-.serverless
-.husky
-.vscode
-
-# Yarn
-.yarn/*
-.pnp.cjs
-.pnp.loader.mjs
-
-# Handlebars not supported by prettier
-*.hbs
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
