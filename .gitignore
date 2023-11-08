@@ -50,8 +50,8 @@ Thumbs.db
 # Terraform
 
 # Local .terraform directories
-**/.terraform/*
-**/terraform/builds/*
+**/.terraform
+**/terraform/builds
 
 # .tfstate files
 *.tfstate
