@@ -5,6 +5,9 @@ dist
 tmp
 /out-tsc
 
+# Environment files
+.env
+
 # dependencies
 node_modules
 
@@ -84,3 +87,5 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+.nx/cache

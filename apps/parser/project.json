@@ -5,35 +5,21 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@nx/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "thirdParty": true,
-        "platform": "node",
-        "outputPath": "dist/apps/parser",
-        "format": ["cjs"],
-        "bundle": true,
-        "main": "apps/parser/src/main.ts",
-        "tsConfig": "apps/parser/tsconfig.app.json",
+        "outputPath": "{workspaceRoot}/dist/apps/parser",
+        "tsConfig": "{projectRoot}/tsconfig.json",
+        "main": "{projectRoot}/src/main.ts",
+        "webpackConfig": "{projectRoot}/webpack.config.js",
         "generatePackageJson": true,
-        "esbuildOptions": {
-          "sourcemap": true,
-          "outExtension": {
-            ".js": ".js"
-          }
-        }
+        "target": "node",
+        "compiler": "swc"
       },
       "configurations": {
         "development": {},
-        "production": {
-          "esbuildOptions": {
-            "sourcemap": false,
-            "outExtension": {
-              ".js": ".js"
-            }
-          }
-        }
+        "production": {}
       }
     },
     "serve": {
@@ -52,7 +38,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/parser/**/*.ts"]
