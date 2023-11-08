@@ -1,5 +1,1 @@
-.husky
-.serverless
-.vscode
-.yarn
-jest.config.js
+node_modules
