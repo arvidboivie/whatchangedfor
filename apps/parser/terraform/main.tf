@@ -19,3 +19,8 @@ module "aws_lambda_setup" {
   name         = "staging-whatchangedfor-parser"
   dynamo_table = "whatchangedfor-staging"
 }
+
+module "dynamodb_table" {
+  source = "../../../terraform/modules/aws-dynamodb-table"
+  name   = "whatchangedfor-staging"
+}
