@@ -13,9 +13,12 @@
         "tsConfig": "{projectRoot}/tsconfig.json",
         "main": "{projectRoot}/src/main.ts",
         "webpackConfig": "{projectRoot}/webpack.config.js",
+        "isolatedConfig": true,
         "generatePackageJson": true,
+        "optimization": true,
+        "sourceMap": true,
         "target": "node",
-        "compiler": "swc"
+        "compiler": "tsc"
       },
       "configurations": {
         "development": {},

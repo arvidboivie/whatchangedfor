@@ -5224,6 +5224,8 @@ __metadata:
     node-fetch: 3.3.2
     nx: 17.0.3
     prettier: ^2.6.2
+    reflect-metadata: ^0.1.13
+    rxjs: ^7.8.1
     serverless-http: 3.2.0
     swc-loader: 0.1.15
     ts-jest: ^29.1.0
@@ -11696,6 +11698,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"reflect-metadata@npm:^0.1.13":
+  version: 0.1.13
+  resolution: "reflect-metadata@npm:0.1.13"
+  checksum: 798d379a7b6f6455501145419505c97dd11cbc23857a386add2b9ef15963ccf15a48d9d15507afe01d4cd74116df8a213247200bac00320bd7c11ddeaa5e8fb4
+  languageName: node
+  linkType: hard
+
 "regenerate-unicode-properties@npm:^10.1.0":
   version: 10.1.0
   resolution: "regenerate-unicode-properties@npm:10.1.0"
@@ -11909,7 +11918,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:7.8.1, rxjs@npm:^7.8.0":
+"rxjs@npm:7.8.1, rxjs@npm:^7.8.0, rxjs@npm:^7.8.1":
   version: 7.8.1
   resolution: "rxjs@npm:7.8.1"
   dependencies:

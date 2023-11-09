@@ -31,9 +31,9 @@ export class ParserService {
   private abilityList: Reference[] = [];
   private patchList: Patch[] = [];
 
-  constructor(configService: ConfigService) {
+  constructor(private readonly configService: ConfigService) {
     this.dynamoClient = new DynamoClient(
-      configService.get<string>(`DYNAMODB_TABLE`)
+      this.configService.get<string>(`DYNAMODB_TABLE`)
     );
   }
 

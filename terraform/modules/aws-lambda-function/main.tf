@@ -5,8 +5,15 @@ module "lambda_function" {
   function_name = var.name
   handler       = var.handler
   runtime       = "nodejs18.x"
+  timeout       = 120
+  memory_size   = 256
 
-  source_path = var.filename
+  create_package         = false
+  local_existing_package = "${var.filename}.zip"
+
+  layers = [
+    module.lambda_layer_dependencies.lambda_layer_arn
+  ]
 
   environment_variables = {
     DYNAMODB_TABLE = "whatchangedfor-staging"
@@ -27,35 +34,26 @@ module "lambda_function" {
   }
 }
 
-# resource "aws_lambda_function" "lambda_function" {
-#   architectures    = ["x86_64"]
-#   filename         = var.filename
-#   function_name    = var.name
-#   handler          = var.handler
-#   kms_key_arn      = null
-#   layers           = []
-#   memory_size      = 256
-#   package_type     = "Zip"
-#   role             = var.role
-#   runtime          = "nodejs18.x"
-#   skip_destroy     = false
-#   source_code_hash = "17QzafVqYitNX/Nxzo8lnqdNtz84lfgiEU1fTXtKQxU="
-#   tags = {
-#     STAGE = var.environment
-#   }
-#   tags_all = {
-#     STAGE = var.environment
-#   }
-#   timeout = 120
-#   environment {
-#     variables = {
-#       DYNAMODB_TABLE = "whatchangedfor-staging"
-#     }
-#   }
-#   ephemeral_storage {
-#     size = 512
-#   }
-#   tracing_config {
-#     mode = "PassThrough"
-#   }
-# }
+module "lambda_layer_dependencies" {
+  source = "terraform-aws-modules/lambda/aws"
+
+  create_layer = true
+
+  layer_name          = "staging-whatchangedfor-dependencies"
+  description         = "Node dependencies for whatchangedfor (staging)"
+  compatible_runtimes = ["nodejs18.x"]
+
+  source_path = "${var.filename}/../nodejs"
+
+  store_on_s3 = true
+  s3_bucket   = aws_s3_bucket.dependency_bucket.bucket
+}
+
+resource "aws_s3_bucket" "dependency_bucket" {
+  bucket = "staging-whatchangedfor-dependency-bucket"
+
+  tags = {
+    project     = "whatchangedfor"
+    environment = "staging"
+  }
+}

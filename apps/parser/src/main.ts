@@ -7,5 +7,5 @@ export const parse = async () => {
     logger: ['error'],
   });
 
-  app.get(ParserService).parse();
+  await app.get(ParserService).parse();
 };
