@@ -37,7 +37,15 @@ export class ParserService {
     );
   }
 
-  public async parse() {
+  /**
+   * Contains the entire patch parsing logic.
+   * Queries the datafeed APIs and dynamodb to figure out
+   * which patches are available and which have already been patched
+   * then parses the missing ones
+   *
+   * @returns the number of patches parsed
+   */
+  public async parse(): Promise<number> {
     await this.prepareData();
 
     const latestVersionParsed = (await this.dynamoClient.get(
@@ -64,6 +72,8 @@ export class ParserService {
       `Done! Parsed ${this.patchList.length} patches`,
       this.patchList
     );
+
+    return this.patchList.length;
   }
 
   private async parsePatch(patch: Patch) {
