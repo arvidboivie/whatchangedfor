@@ -1,3 +1,7 @@
+# Archived
+
+Reason: While I thought this was a fun project, the reality of trying to keep up with Dota's undocumented format made this unfeasible to maintain for me.
+
 # What changed for {your favorite Dota 2 hero}
 
 [whatchangedfor.com](https://www.whatchangedfor.com/pudge) is a Dota 2 changelog tracker for individual heroes.
